@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #000000;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+h1 {
+  font-size: 32px;
+  font-family: var(--font-roboto);
+}
+
+p {
+  font-size: 16px;
+  font-family: var(--font-inter);
+}
+
+.hero {
+  background-image: url("/hero-shape-right.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
