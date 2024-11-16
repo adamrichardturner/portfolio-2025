@@ -23,7 +23,7 @@ p {
 }
 
 .hero {
-  background-image: url("/hero-shape-right.svg");
+  background-image: url('/hero-shape-right.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top right;
