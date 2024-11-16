@@ -44,12 +44,12 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
           </p>
         </div>
         <div className="mt-4 flex flex-col gap-0">
-          <span className="m-0 pb-1 text-xs text-white">Skills</span>
+          <span className="m-0 pb-1 text-[10px] text-white">Skills</span>
           <div className="mt-0 flex flex-wrap gap-2">
             {project.skills.map((skill) => (
               <span
                 key={skill}
-                className="rounded-full bg-gray-800 px-3 py-1 text-xs"
+                className="rounded-full bg-gray-800 px-3 py-1.5 text-[10px]"
               >
                 {skill}
               </span>
@@ -66,7 +66,7 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
           >
             <Button
               variant="outline"
-              className="w-[76px] border-none bg-slate-100 text-sm text-black hover:bg-white"
+              className="h-[30px] w-[76px] border-none bg-slate-100 py-0 text-sm text-black hover:bg-white"
             >
               GitHub
             </Button>
@@ -80,7 +80,7 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
           >
             <Button
               variant="outline"
-              className="w-[76px] border-none bg-secondary text-sm text-white hover:bg-lightSecondary hover:text-white"
+              className="h-[30px] w-[76px] border-none bg-secondary text-sm text-white hover:bg-lightSecondary hover:text-white"
             >
               Live
             </Button>

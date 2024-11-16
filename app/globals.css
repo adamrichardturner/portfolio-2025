@@ -94,3 +94,71 @@ p {
     @apply bg-background text-foreground;
   }
 }
+
+/* Slick slider custom styles */
+.projects-slider .slick-prev,
+.projects-slider .slick-next {
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.projects-slider .slick-prev {
+  left: 12px;
+}
+
+.projects-slider .slick-next {
+  right: 12px;
+}
+
+.projects-slider .slick-prev:before,
+.projects-slider .slick-next:before {
+  font-size: 20px;
+  color: white;
+  opacity: 1;
+}
+
+.projects-slider .slick-dots {
+  bottom: 8px;
+}
+
+.projects-slider .slick-dots li {
+  width: 16px;
+  height: 16px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Updated dot styles */
+.projects-slider .slick-dots li button {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 0.2s;
+}
+
+.projects-slider .slick-dots li button:before {
+  display: none; /* Hide the default dot */
+}
+
+.projects-slider .slick-dots li.slick-active button {
+  background: rgba(255, 255, 255, 1); /* Full white for active dot */
+}
+
+.projects-slider .slick-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media only screen and (max-width: 640px) {
+  .projects-slider .slick-prev:before,
+  .projects-slider .slick-next:before {
+    display: none;
+  }
+}

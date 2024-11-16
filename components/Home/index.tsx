@@ -6,7 +6,7 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="flex flex-row items-center justify-center space-x-4">
+    <div className="flex h-full flex-row items-center justify-center md:space-x-4">
       <div className="relative">
         {isLoading && (
           <div className="absolute inset-0 z-10 flex items-center justify-center rounded-full bg-black lg:block">
@@ -33,13 +33,13 @@ const Home = () => {
         />
       </div>
       <div className="space-y-4 text-white">
-        <div className="flex flex-row items-center justify-start space-x-3">
+        <div className="flex flex-row items-center justify-start space-x-0 md:space-x-3">
           <h1 className="font-inter text-4xl font-semibold leading-none md:text-6xl">
             Adam Richard Turner
           </h1>
         </div>
         <div className="space-y-4 font-inter">
-          <p className="text-sm">
+          <p className="max-w-[600px] text-sm lg:max-w-full">
             <span className="font-bold text-secondary">Software Engineer</span>{' '}
             based in London, focused on crafting high-quality Front End UI for
             web applications using TypeScript and a variety of other tools.

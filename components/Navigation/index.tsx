@@ -6,7 +6,7 @@ interface NavigationProps {
 }
 
 const Navigation = ({ selectedLink, setSelectedLink }: NavigationProps) => {
-  const links = ['Home', 'About', 'Projects'];
+  const links = ['Home', 'About Me', 'Projects'];
 
   return (
     <nav className="flex flex-row items-center justify-center gap-8 py-6">
@@ -14,7 +14,7 @@ const Navigation = ({ selectedLink, setSelectedLink }: NavigationProps) => {
         <motion.button
           key={link}
           onClick={() => setSelectedLink(link)}
-          className="relative text-sm"
+          className="md:text-md relative text-sm"
         >
           <span
             className={`transition-colors duration-200 ease-in-out ${
@@ -27,7 +27,7 @@ const Navigation = ({ selectedLink, setSelectedLink }: NavigationProps) => {
           </span>
           {selectedLink === link && (
             <motion.div
-              className="absolute bottom-0 left-0 h-[2px] bg-white"
+              className="absolute bottom-0 h-[1px] bg-white"
               initial={{ width: 0 }}
               animate={{ width: '100%' }}
               transition={{ duration: 0.2, ease: 'easeOut' }}

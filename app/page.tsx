@@ -12,13 +12,14 @@ export default function Page() {
 
   const renderContent = () => {
     switch (selectedLink) {
-      case 'About':
+      case 'About Me':
         return (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.25, ease: 'easeIn' }}
+            className="h-full"
           >
             <About />
           </motion.div>
@@ -30,6 +31,7 @@ export default function Page() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.25, ease: 'easeIn' }}
+            className="h-full"
           >
             <Projects />
           </motion.div>
@@ -40,7 +42,8 @@ export default function Page() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1, ease: 'easeInOut' }}
+            transition={{ duration: 1.25, ease: 'easeInOut' }}
+            className="h-full"
           >
             <Home />
           </motion.div>
@@ -58,8 +61,8 @@ export default function Page() {
           setSelectedLink={setSelectedLink}
         />
       </header>
-      <main className="flex flex-1 items-center justify-center p-4 md:-mt-[32px]">
-        <div className="w-full max-w-4xl">
+      <main className="flex h-full flex-1 items-center justify-center p-4 pt-[40px]">
+        <div className="min-h-[380px] w-full max-w-4xl md:-mt-[40px] md:h-[380px]">
           <AnimatePresence mode="wait">{renderedComponent}</AnimatePresence>
         </div>
       </main>

@@ -3,8 +3,8 @@
     {
       "title": "Invoice Tracker",
       "media": "/projects/invoice-tracker.gif",
-      "description": "A well designed invoice tracker with a clean UI and smooth animations",
-      "skills": ["React", "Next.js", "Express", "Tailwind CSS"],
+      "description": "Clean design invoice tracker with smooth animations",
+      "skills": ["React", "Next.js", "Express"],
       "github": "https://github.com/adamrichardturner/invoice-tracker-frontend",
       "live": "https://invoice-tracker.adamrichardturner.dev/",
       "isPriority": true
@@ -12,16 +12,16 @@
     {
       "title": "NumberNinja Mobile Game",
       "media": "/projects/number-ninja.png",
-      "description": "iOS and Android mobile game built with React Native, Firebase & Express",
-      "skills": ["React Native", "Express", "Firebase", "TypeScript"],
+      "description": "iOS and Android mobile game built with React Native",
+      "skills": ["React Native", "Express", "Firebase"],
       "github": "https://github.com/adamrichardturner/number-ninja",
       "live": "https://apps.apple.com/gb/app/number-ninja-math-game/id6670713997"
     },
     {
       "title": "Countries API",
       "media": "/projects/countries-api.png",
-      "description": "Frontend web application utilising infinite scroll and built with Next.js",
-      "skills": ["Next.js", "TypeScript", "Shadcn/UI", "Framer Motion"],
+      "description": "Frontend web application utilising infinite scroll",
+      "skills": ["Next.js", "TypeScript", "Shadcn/UI"],
       "github": "https://github.com/adamrichardturner/countries",
       "live": "https://countries.adamrichardturner.dev/"
     }

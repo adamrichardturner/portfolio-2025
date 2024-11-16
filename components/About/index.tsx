@@ -14,10 +14,9 @@ const About = () => {
     >
       <div className="mb-6">
         <h2 className="mb-0 text-3xl font-bold leading-none">About Me</h2>
-        <span className="text-sm text-gray-400">Get to know me better</span>
       </div>
 
-      <div className="grid grid-cols-1 gap-8 md:h-[360px] md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <div className="space-y-4">
           <div className="relative h-[200px] w-full md:hidden">
             <Image
@@ -33,26 +32,17 @@ const About = () => {
           </div>
           <p className="text-sm text-gray-300">
             I&apos;m a{' '}
-            <span className="font-semibold text-white">
-              Full Stack Software Engineer
-            </span>{' '}
+            <span className="font-semibold text-white">Software Engineer</span>{' '}
             with a strong passion for{' '}
             <span className="font-semibold text-white">
               Frontend Development
             </span>
             , currently{' '}
-            <span className="font-semibold text-white">based in London</span>,
-            where I work for a high-performing start-up specialising in
-            cutting-edge mobile technology for the{' '}
-            <span className="font-semibold text-white">eCommerce sector</span>.
+            <span className="font-semibold text-white">based in London</span>.
           </p>
           <p className="text-sm text-gray-300">
-            My role is diverse and dynamic. Primarily, I focus on developing a
-            drag-and-drop CMS using{' '}
-            <span className="font-semibold text-white">React</span> that enables
-            clients to easily customize and manage native eCommerce mobile apps.
-            Additionally, I build internal tools to streamline and support vital
-            business operations.
+            I work for a high-performing start-up specialising in cutting-edge
+            mobile technology for the eCommerce sector.
           </p>
           <p className="text-sm text-gray-300">
             Outside of work, I have a love for reading, staying fit, and caring
@@ -64,7 +54,7 @@ const About = () => {
               {['TypeScript', 'React', 'Next.js', 'Express'].map((skill) => (
                 <span
                   key={skill}
-                  className="rounded-full bg-gray-800 px-3 py-1 text-sm text-gray-300"
+                  className="rounded-full bg-gray-800 px-3 py-1 text-[10px] text-white"
                 >
                   {skill}
                 </span>
@@ -73,7 +63,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="relative h-full w-full">
+        <div className="relative hidden h-[220px] w-full md:block">
           <div className="w-full overflow-hidden rounded-lg">
             {isLoading && (
               <div className="absolute inset-0 z-10 flex items-center justify-center rounded-lg bg-black">
