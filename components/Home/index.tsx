@@ -22,8 +22,8 @@ const Home = () => {
         <div className="space-y-4 font-inter">
           <p className="text-base">
             <span className="font-bold text-secondary">Software Engineer</span>{' '}
-            based in London, skilled at crafting Front End UI for web
-            applications using TypeScript and a variety of other tools.
+            based in London, focused on crafting high-quality Front End UI for
+            web applications using TypeScript and a variety of other tools.
           </p>
           <h3 className="text-xs">
             Reach out to me via any of the below [Not looking for work]

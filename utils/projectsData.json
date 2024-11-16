@@ -4,26 +4,26 @@
       "title": "Invoice Tracker",
       "media": "/projects/invoice-tracker.gif",
       "description": "A well designed invoice tracker with a clean UI and smooth animations",
-      "skills": ["React", "Next.js", "Express", "TypeScript", "Tailwind CSS"],
+      "skills": ["React", "Next.js", "Express", "Tailwind CSS"],
       "github": "https://github.com/adamrichardturner/invoice-tracker-frontend",
       "live": "https://invoice-tracker.adamrichardturner.dev/",
       "isPriority": true
     },
     {
-      "title": "AI Chat Application",
-      "media": "/images/project2.jpg",
-      "description": "Real-time chat application powered by OpenAI's GPT-3",
-      "skills": ["React", "Node.js", "Socket.io", "OpenAI API"],
-      "github": "https://github.com/username/ai-chat",
-      "live": "https://ai-chat-demo.com"
+      "title": "NumberNinja Mobile Game",
+      "media": "/projects/number-ninja.png",
+      "description": "iOS and Android mobile game built with React Native, Firebase & Express",
+      "skills": ["React Native", "Express", "Firebase", "TypeScript"],
+      "github": "https://github.com/adamrichardturner/number-ninja",
+      "live": "https://apps.apple.com/gb/app/number-ninja-math-game/id6670713997"
     },
     {
-      "title": "Portfolio Website",
-      "media": "/images/project3.jpg",
-      "description": "Personal portfolio website with animated transitions",
-      "skills": ["React", "Framer Motion", "Tailwind CSS", "TypeScript"],
-      "github": "https://github.com/username/portfolio",
-      "live": "https://portfolio-demo.com"
+      "title": "Countries API",
+      "media": "/projects/countries-api.png",
+      "description": "Frontend web application utilising infinite scroll and built with Next.js",
+      "skills": ["Next.js", "TypeScript", "Shadcn/UI", "Framer Motion"],
+      "github": "https://github.com/adamrichardturner/countries",
+      "live": "https://countries.adamrichardturner.dev/"
     }
   ]
 }

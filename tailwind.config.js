@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ['class'],
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -15,8 +16,18 @@ module.exports = {
         league: 'var(--font-league)',
       },
       colors: {
-        primary: '#0C121C', // old: #2F38D9
-        secondary: '#42684F', // #2A9DF4 #FFC436
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
+        },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))',
+        },
+        lightSecondary: {
+          DEFAULT: 'hsl(var(--light-secondary))',
+          foreground: 'hsl(var(--light-secondary-foreground))',
+        },
         tertiary: '#484848',
         body: '#1E1E1E',
         caption: '#3A3A3A',
@@ -26,6 +37,38 @@ module.exports = {
         captiontext: '#1E1E1E',
         'form-input': '#F6F6F6',
         'form-border': '#E7E7E7',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        chart: {
+          1: 'hsl(var(--chart-1))',
+          2: 'hsl(var(--chart-2))',
+          3: 'hsl(var(--chart-3))',
+          4: 'hsl(var(--chart-4))',
+          5: 'hsl(var(--chart-5))',
+        },
       },
       fontSize: {
         xxs: '0.6rem',
@@ -42,7 +85,7 @@ module.exports = {
         '5xl': '4rem',
       },
       container: {
-        center: true,
+        center: 'true',
         padding: '1rem',
         screens: {
           sm: '100%',
@@ -66,7 +109,12 @@ module.exports = {
       textShadow: {
         md: '0 0 8px rgb(74, 222, 128)',
       },
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
+      },
     },
   },
-  plugins: [require('tailwindcss-textshadow')],
+  plugins: [require('tailwindcss-textshadow'), require('tailwindcss-animate')],
 };

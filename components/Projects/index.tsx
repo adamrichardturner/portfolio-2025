@@ -8,18 +8,7 @@ const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const projects = projectsData.projects as Project[];
   const [isDragging, setIsDragging] = useState(false);
-  const [dragStartX, setDragStartX] = useState(0);
-  const DRAG_THRESHOLD = 50; // Minimum drag distance to trigger slide change
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === projects.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 8000);
-
-    return () => clearInterval(timer);
-  }, [projects.length]);
+  const DRAG_THRESHOLD = 50;
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
@@ -43,7 +32,6 @@ const Projects = () => {
     const dragDistance = info.offset.x;
     const dragVelocity = info.velocity.x;
 
-    // Change slide if drag distance exceeds threshold or if flick velocity is high
     if (
       Math.abs(dragDistance) > DRAG_THRESHOLD ||
       Math.abs(dragVelocity) > 500
@@ -63,8 +51,14 @@ const Projects = () => {
       exit={{ opacity: 0 }}
       className="text-white"
     >
-      <h1 className="mb-6 text-3xl font-bold">My Projects</h1>
-      <div className="relative h-full overflow-hidden rounded-lg border border-gray-700 md:h-[340px]">
+      <div className="mb-6">
+        <h2 className="mb-0 text-3xl font-bold leading-none">Projects</h2>
+        <span className="text-sm text-gray-400">
+          A curated selection of some of my favourite projects
+        </span>
+      </div>
+
+      <div className="relative h-full overflow-hidden rounded-lg border border-gray-700 bg-black md:h-[360px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -90,16 +84,65 @@ const Projects = () => {
           </motion.div>
         </AnimatePresence>
 
-        <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
-          {projects.map((_, index) => (
+        <div className="absolute bottom-4 left-0 right-0 flex flex-col items-center gap-4">
+          <div className="ml-14 mt-4 hidden w-full items-center justify-start gap-4 md:flex">
             <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`h-2 w-2 rounded-full transition ${
-                index === currentIndex ? 'bg-white' : 'bg-gray-500'
-              }`}
-            />
-          ))}
+              onClick={handlePrevious}
+              disabled={currentIndex === 0}
+              className="rounded-full bg-gray-800/50 p-1 text-white transition-all hover:bg-gray-700/50 disabled:cursor-not-allowed disabled:opacity-50"
+              aria-label="Previous project"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="h-5 w-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                />
+              </svg>
+            </button>
+
+            <button
+              onClick={handleNext}
+              disabled={currentIndex === projects.length - 1}
+              className="rounded-full bg-gray-800/50 p-1 text-white transition-all hover:bg-gray-700/50 disabled:cursor-not-allowed disabled:opacity-50"
+              aria-label="Next project"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="h-5 w-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div className="flex gap-2">
+            {projects.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`h-2 w-2 rounded-full transition ${
+                  index === currentIndex ? 'bg-white' : 'bg-gray-500'
+                }`}
+                aria-label={`Go to project ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </motion.div>
