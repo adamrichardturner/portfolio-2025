@@ -31,7 +31,7 @@ const About = () => {
             />
           </div>
           <p className="text-sm text-gray-300">
-            I'm a{' '}
+            I&apos;m a{' '}
             <span className="font-semibold text-white">
               Full Stack Software Engineer
             </span>{' '}
