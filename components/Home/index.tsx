@@ -1,16 +1,35 @@
 import Image from 'next/image';
 import SocialLinks from '../SocialLinks';
+import { useState } from 'react';
 
 const Home = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <div className="flex flex-row items-center justify-center space-x-4">
-      <div>
+      <div className="relative">
+        {isLoading && (
+          <div className="absolute inset-0 z-10 flex items-center justify-center rounded-full bg-black lg:block">
+            <Image
+              src="/Spinner.svg"
+              alt="Loading..."
+              width={40}
+              height={40}
+              className="animate-spin"
+              priority={true}
+            />
+          </div>
+        )}
         <Image
           src="/adam-thumb.png"
           width={300}
           height={300}
           alt="Adam Richard Turner"
           className="hidden rounded-full lg:block"
+          priority={true}
+          loading="eager"
+          quality={100}
+          onLoad={() => setIsLoading(false)}
         />
       </div>
       <div className="space-y-4 text-white">

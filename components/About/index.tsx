@@ -17,7 +17,7 @@ const About = () => {
         <span className="text-sm text-gray-400">Get to know me better</span>
       </div>
 
-      <div className="grid h-full grid-cols-1 gap-8 md:h-[360px] md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-8 md:h-[360px] md:grid-cols-2">
         <div className="space-y-4">
           <div className="relative h-[200px] w-full md:hidden">
             <Image
@@ -26,7 +26,8 @@ const About = () => {
               fill
               className="rounded-lg object-cover object-left"
               sizes="(max-width: 768px) 100vw, 50vw"
-              priority
+              priority={true}
+              loading="eager"
               onLoad={() => setIsLoading(false)}
             />
           </div>
@@ -88,7 +89,8 @@ const About = () => {
                   alt="Loading..."
                   width={40}
                   height={40}
-                  className="animate-spin rounded-lg"
+                  className="animate-spin"
+                  priority={true}
                 />
               </div>
             )}
@@ -98,7 +100,9 @@ const About = () => {
               fill
               className="rounded-lg object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
-              priority
+              priority={true}
+              loading="eager"
+              quality={100}
               onLoad={() => setIsLoading(false)}
             />
           </div>
