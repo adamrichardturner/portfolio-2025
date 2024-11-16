@@ -131,7 +131,7 @@ const Projects = () => {
             </button>
           </div>
 
-          <div className="flex gap-2">
+          <div className="flex gap-2 pt-2">
             {projects.map((_, index) => (
               <button
                 key={index}

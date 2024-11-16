@@ -39,12 +39,12 @@ const Home = () => {
           </h1>
         </div>
         <div className="space-y-4 font-inter">
-          <p className="text-base">
+          <p className="text-sm">
             <span className="font-bold text-secondary">Software Engineer</span>{' '}
             based in London, focused on crafting high-quality Front End UI for
             web applications using TypeScript and a variety of other tools.
           </p>
-          <h3 className="text-xs">
+          <h3 className="text-[12px]">
             Reach out to me via any of the below [Not looking for work]
           </h3>
           <SocialLinks />

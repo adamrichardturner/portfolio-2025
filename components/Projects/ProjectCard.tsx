@@ -12,7 +12,7 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="grid grid-cols-1 gap-6 p-4 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-6 p-1 pb-4 md:grid-cols-2 md:p-4">
       <div className="relative aspect-video w-full overflow-hidden rounded-lg">
         {isLoading && (
           <div className="absolute inset-0 z-10 flex items-center justify-center bg-black">

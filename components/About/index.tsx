@@ -61,14 +61,7 @@ const About = () => {
           <div className="space-y-2">
             <h2 className="text-xl font-semibold text-secondary">Skills</h2>
             <div className="flex flex-wrap gap-2">
-              {[
-                'TypeScript',
-                'React',
-                'Next.js',
-                'Node.js',
-                'Tailwind CSS',
-                'PostgreSQL',
-              ].map((skill) => (
+              {['TypeScript', 'React', 'Next.js', 'Express'].map((skill) => (
                 <span
                   key={skill}
                   className="rounded-full bg-gray-800 px-3 py-1 text-sm text-gray-300"

@@ -58,7 +58,7 @@ export default function Page() {
           setSelectedLink={setSelectedLink}
         />
       </header>
-      <main className="-mt-[32px] flex flex-1 items-center justify-center p-4">
+      <main className="flex flex-1 items-center justify-center p-4 md:-mt-[32px]">
         <div className="w-full max-w-4xl">
           <AnimatePresence mode="wait">{renderedComponent}</AnimatePresence>
         </div>
