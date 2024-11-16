@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: 'Adam Richard Turner',
     images: [
       {
-        url: 'https://adamrichardturner.dev/adamturner-social.png',
+        url: 'https://adamrichardturner.dev/adam-social.png',
         width: 1200,
         height: 630,
         alt: 'Adam Richard Turner - Software Engineer',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
       'Software Engineer based in London focused on crafting high-quality Front End UI for web applications',
     images: [
       {
-        url: 'https://adamrichardturner.dev/adamturner-social.png',
+        url: 'https://adamrichardturner.dev/adam-social.png',
         alt: 'Adam Richard Turner - Software Engineer',
       },
     ],
