@@ -35,7 +35,7 @@ const Home = () => {
               </div>
             )}
             <Image
-              src="/adam-finland.jpg"
+              src="/adam-fountain.jpg"
               alt="Adam Richard Turner"
               fill
               className="rounded-lg object-cover object-center"
@@ -80,7 +80,7 @@ const Home = () => {
               </div>
             )}
             <Image
-              src="/adam-finland.jpg"
+              src="/adam-fountain.jpg"
               alt="Adam Richard Turner"
               fill
               className="rounded-lg object-cover"

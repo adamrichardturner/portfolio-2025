@@ -33,8 +33,8 @@ const About = () => {
               </div>
             )}
             <Image
-              src="/adam-fountain.jpg"
-              alt="Adam Turner at a fountain"
+              src="/adam-chinatown.jpg"
+              alt="Adam Turner in Chinatown"
               fill
               className="rounded-lg object-cover object-left"
               loading="lazy"
@@ -60,7 +60,7 @@ const About = () => {
           <div className="space-y-2">
             <h2 className="text-md font-semibold text-secondary">Key Skills</h2>
             <div className="flex flex-wrap gap-2">
-              {['TypeScript', 'React', 'Next.js', 'Express'].map((skill) => (
+              {['TypeScript', 'React', 'Next', 'Express'].map((skill) => (
                 <span
                   key={skill}
                   className="rounded-full bg-gray-800 px-3 py-1 text-[10px] text-white"
@@ -86,8 +86,8 @@ const About = () => {
               </div>
             )}
             <Image
-              src="/adam-fountain.jpg"
-              alt="Adam Turner at a fountain"
+              src="/adam-chinatown.jpg"
+              alt="Adam Turner in Chinatown"
               fill
               className="rounded-lg object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
