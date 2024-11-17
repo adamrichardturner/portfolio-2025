@@ -26,8 +26,7 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 50vw"
-          priority={project.isPriority}
-          loading="eager"
+          loading="lazy"
           onLoad={() => setIsLoading(false)}
         />
       </div>

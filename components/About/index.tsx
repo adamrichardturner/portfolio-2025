@@ -37,8 +37,7 @@ const About = () => {
               alt="Adam Turner at a fountain"
               fill
               className="rounded-lg object-cover object-left"
-              priority={true}
-              loading="eager"
+              loading="lazy"
               onLoad={() => setIsLoading(false)}
             />
           </div>
@@ -51,8 +50,8 @@ const About = () => {
             features and projects.
           </p>
           <p className="max-w-[500px] text-[14px] text-gray-300">
-            I work for a London based high-performing start-up which specialises
-            in cutting-edge mobile technology for the eCommerce sector.
+            I work for a high-performing start-up in London which specialises in
+            cutting-edge mobile technology for the eCommerce sector.
           </p>
           <p className="max-w-[500px] text-[14px] text-gray-300">
             Outside of work, I have a love for reading, staying fit, and caring
@@ -73,7 +72,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="relative hidden h-[236px] w-full md:block">
+        <div className="relative mt-4 hidden h-[236px] w-full md:block">
           <div className="w-full overflow-hidden rounded-lg">
             {isLoading && (
               <div className="absolute inset-0 z-10 flex items-center justify-center rounded-lg bg-black">

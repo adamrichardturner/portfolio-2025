@@ -63,7 +63,7 @@ export default function Page() {
               setSelectedLink={setSelectedLink}
             />
           </header>
-          <AnimatePresence mode="wait">{renderedComponent}</AnimatePresence>
+          <AnimatePresence>{renderedComponent}</AnimatePresence>
         </div>
       </main>
     </div>

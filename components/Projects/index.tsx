@@ -18,7 +18,7 @@ const Projects = () => {
     arrows: true,
     adaptiveHeight: false,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 8000,
     cssEase: 'ease-in-out',
     className: 'center',
     centerMode: false,
@@ -42,7 +42,7 @@ const Projects = () => {
       exit={{ opacity: 0 }}
       className="text-white"
     >
-      <div className="mb-6">
+      <div className="mb-5">
         <h2 className="mb-0 font-inter text-2xl font-bold leading-none sm:text-3xl">
           Projects
         </h2>
