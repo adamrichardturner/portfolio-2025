@@ -33,7 +33,7 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
       <div className="flex flex-col justify-between">
         <div>
           <h2 className="mb-2 text-xl font-bold">{project.title}</h2>
-          <p className="text-sm leading-tight text-gray-400">
+          <p className="text-sm leading-tight text-gray-200">
             {project.description}
           </p>
         </div>
@@ -70,7 +70,7 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => isDragging && e.preventDefault()}
-            className="flex items-center gap-2 text-gray-400 transition hover:text-white"
+            className="flex items-center gap-2 text-gray-200 transition hover:text-white"
           >
             <Button
               variant="outline"

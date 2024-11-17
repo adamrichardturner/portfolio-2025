@@ -13,20 +13,20 @@ const SocialLinks = () => {
       <ul className="flex flex-row items-center space-x-2 text-3xl text-white sm:text-4xl">
         <li>
           <a
-            href="https://github.com/adamrichardturner/"
-            target="_blank"
-            aria-label="GitHub"
-          >
-            <FaSquareGithub className="rounded transition-shadow hover:md:shadow-md hover:md:shadow-secondary" />
-          </a>
-        </li>
-        <li>
-          <a
             href="mailto:hello@adamrichardturner.dev"
             target="_blank"
             aria-label="Email"
           >
             <FaSquareEnvelope className="rounded transition-shadow hover:md:shadow-md hover:md:shadow-secondary" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/adamrichardturner/"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <FaSquareGithub className="rounded transition-shadow hover:md:shadow-md hover:md:shadow-secondary" />
           </a>
         </li>
         <li>

@@ -36,24 +36,24 @@ const About = () => {
               src="/adam-fountain.jpg"
               alt="Adam Turner at a fountain"
               fill
-              className="rounded-lg object-cover object-center"
+              className="rounded-lg object-cover object-left"
               loading="lazy"
               onLoad={() => setIsLoading(false)}
             />
           </div>
-          <p className="max-w-[500px] text-[14px] text-gray-300">
+          <p className="max-w-[500px] text-[14px] text-gray-200">
             I have a strong passion for{' '}
             <span className="font-semibold text-white">
-              Front-end Development
+              Front End Development
             </span>{' '}
             and really enjoy working across the stack to deliver end-to-end
             features and projects.
           </p>
-          <p className="max-w-[500px] text-[14px] text-gray-300">
+          <p className="max-w-[500px] text-[14px] text-gray-200">
             I work for a high-performing start-up in London which specialises in
             cutting-edge mobile technology for the eCommerce sector.
           </p>
-          <p className="max-w-[500px] text-[14px] text-gray-300">
+          <p className="max-w-[500px] text-[14px] text-gray-200">
             Outside of work, I have a love for reading, staying fit, and caring
             for my tropical fish.
           </p>
