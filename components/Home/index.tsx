@@ -32,7 +32,7 @@ const Home = () => {
               src="/adam-thumb.png"
               alt="Adam Richard Turner"
               fill
-              className="rounded-lg object-cover object-left"
+              className="rounded-lg object-cover object-left [transform:scaleX(-1)]"
               priority={true}
               loading="eager"
               onLoad={() => setIsLoading(false)}
@@ -73,7 +73,7 @@ const Home = () => {
           width={236}
           height={236}
           alt="Adam Richard Turner"
-          className="rounded-lg"
+          className="rounded-lg [transform:scaleX(-1)]"
           priority={true}
           loading="eager"
           quality={100}
