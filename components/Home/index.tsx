@@ -6,10 +6,63 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="flex w-full flex-1 flex-row-reverse items-start justify-between">
-      <div className="flex h-full items-start justify-start">
+    <div className="flex w-full flex-1 flex-col items-start justify-between sm:flex-row">
+      <div className="flex h-full w-full flex-1 flex-col items-start space-y-4 text-gray-300">
+        <div className="mb-0 flex w-full flex-row items-center justify-start space-x-0 sm:space-x-3">
+          <h1 className="font-inter text-3xl font-bold leading-none text-white">
+            Adam Richard Turner
+          </h1>
+        </div>
+
+        {/* Mobile Image */}
+        <div className="relative h-[270px] w-full sm:hidden">
+          {isLoading && (
+            <div className="absolute inset-0 z-10 flex items-center justify-center bg-black">
+              <Image
+                src="/Spinner.svg"
+                alt="Loading..."
+                width={40}
+                height={40}
+                className="animate-spin"
+                priority={true}
+              />
+            </div>
+          )}
+          <div className="relative h-[270px] w-full sm:hidden">
+            <Image
+              src="/adam-thumb.png"
+              alt="Adam Richard Turner"
+              fill
+              className="rounded-lg object-cover object-left"
+              priority={true}
+              loading="eager"
+              onLoad={() => setIsLoading(false)}
+            />
+          </div>
+        </div>
+
+        <div className="space-y-4 font-inter">
+          <p className="max-w-[600px] text-sm lg:max-w-full">
+            <span className="font-bold text-secondary">Software Engineer</span>{' '}
+            based in London, focused on crafting high-quality Front End UI for
+            web applications using TypeScript and a variety of other tools.
+          </p>
+          <div className="pt-4">
+            <h3 className="pb-2 text-[12px]">
+              Reach out to me via any of the below{' '}
+              <span className="font-semibold text-white">
+                [Not looking for work]
+              </span>
+            </h3>
+            <SocialLinks />
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Image */}
+      <div className="relative hidden sm:block">
         {isLoading && (
-          <div className="absolute inset-0 z-10 flex items-center justify-center rounded-full bg-black lg:block">
+          <div className="absolute inset-0 z-10 flex items-center justify-center bg-black">
             <Image
               src="/Spinner.svg"
               alt="Loading..."
@@ -25,33 +78,12 @@ const Home = () => {
           width={200}
           height={200}
           alt="Adam Richard Turner"
-          className="hidden scale-x-[-1] rounded-lg lg:block"
+          className="rounded-lg"
           priority={true}
           loading="eager"
           quality={100}
           onLoad={() => setIsLoading(false)}
         />
-      </div>
-      <div className="flex h-full flex-1 flex-col items-start space-y-4 text-gray-300">
-        <div className="mb-6 flex flex-row items-center justify-start space-x-0 md:space-x-3">
-          <h1 className="font-inter text-3xl font-bold leading-none text-white">
-            Adam Richard Turner
-          </h1>
-        </div>
-        <div className="max-w-[600px] space-y-4 font-inter">
-          <p className="text-sm lg:max-w-full">
-            <span className="font-bold text-white">Software Engineer</span>{' '}
-            based in London, focused on crafting high-quality Front End UI for
-            web applications using TypeScript and a variety of other tools.
-          </p>
-          <h3 className="text-[12px]">
-            Reach out to me via any of the below{' '}
-            <span className="font-semibold text-white">
-              [Not looking for work]
-            </span>
-          </h3>
-          <SocialLinks />
-        </div>
       </div>
     </div>
   );

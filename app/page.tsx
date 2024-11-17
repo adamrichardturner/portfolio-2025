@@ -18,7 +18,7 @@ export default function Page() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1.25, ease: 'easeIn' }}
+            transition={{ duration: 0.25, ease: 'easeIn' }}
             className="h-full"
           >
             <About />
@@ -30,7 +30,7 @@ export default function Page() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1.25, ease: 'easeIn' }}
+            transition={{ duration: 0.25, ease: 'easeIn' }}
             className="h-full"
           >
             <Projects />
@@ -42,8 +42,8 @@ export default function Page() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1.25, ease: 'easeInOut' }}
-            className="h-full"
+            transition={{ duration: 0.25, ease: 'easeInOut' }}
+            className="items-between flex h-full flex-1"
           >
             <Home />
           </motion.div>
@@ -55,14 +55,14 @@ export default function Page() {
 
   return (
     <div className="hero flex min-h-svh flex-col">
-      <header className="h-[60px] w-full">
-        <Navigation
-          selectedLink={selectedLink}
-          setSelectedLink={setSelectedLink}
-        />
-      </header>
-      <main className="flex h-full flex-1 items-center justify-center p-4 md:pt-[60px]">
-        <div className="min-h-[380px] w-full max-w-4xl md:h-[380px]">
+      <main className="flex flex-1 items-center justify-center p-4">
+        <div className="h-[570px] w-full max-w-4xl sm:h-[380px]">
+          <header className="mb-0 w-full pb-6">
+            <Navigation
+              selectedLink={selectedLink}
+              setSelectedLink={setSelectedLink}
+            />
+          </header>
           <AnimatePresence mode="wait">{renderedComponent}</AnimatePresence>
         </div>
       </main>

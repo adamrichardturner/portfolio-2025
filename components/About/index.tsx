@@ -12,21 +12,20 @@ const About = () => {
       exit={{ opacity: 0 }}
       className="text-white"
     >
-      <div className="mb-6">
-        <h2 className="mb-0 font-inter text-3xl font-bold leading-none">
+      <div className="mb-0">
+        <h2 className="mb-4 font-inter text-3xl font-bold leading-none md:mb-0">
           About Me
         </h2>
       </div>
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <div className="space-y-4">
-          <div className="relative h-[200px] w-full md:hidden">
+          <div className="relative h-[270px] w-full md:hidden">
             <Image
               src="/adam-fountain.png"
               alt="Adam Turner at a fountain"
               fill
               className="rounded-lg object-cover object-left"
-              sizes="(max-width: 768px) 100vw, 50vw"
               priority={true}
               loading="eager"
               onLoad={() => setIsLoading(false)}
