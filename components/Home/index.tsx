@@ -23,7 +23,6 @@ const Home = () => {
                 alt="Loading..."
                 width={40}
                 height={40}
-                className="animate-spin"
                 priority={true}
               />
             </div>
@@ -43,16 +42,13 @@ const Home = () => {
 
         <div className="space-y-4 font-inter">
           <p className="max-w-[600px] text-sm lg:max-w-full">
-            <span className="font-bold text-secondary">Software Engineer</span>{' '}
+            <span className="font-bold text-white">Software Engineer</span>{' '}
             based in London, focused on crafting high-quality Front End UI for
             web applications using TypeScript and a variety of other tools.
           </p>
-          <div className="pt-4">
+          <div className="pt-8">
             <h3 className="pb-2 text-[12px]">
               Reach out to me via any of the below{' '}
-              <span className="font-semibold text-white">
-                [Not looking for work]
-              </span>
             </h3>
             <SocialLinks />
           </div>
@@ -68,7 +64,6 @@ const Home = () => {
               alt="Loading..."
               width={40}
               height={40}
-              className="animate-spin"
               priority={true}
             />
           </div>

@@ -16,13 +16,7 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
       <div className="relative aspect-video w-full overflow-hidden rounded-lg">
         {isLoading && (
           <div className="absolute inset-0 z-10 flex items-center justify-center bg-black">
-            <Image
-              src="/Spinner.svg"
-              alt="Loading..."
-              width={40}
-              height={40}
-              className="animate-spin"
-            />
+            <Image src="/Spinner.svg" alt="Loading..." width={40} height={40} />
           </div>
         )}
         <Image
@@ -49,7 +43,7 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
             {project.skills.map((skill) => (
               <span
                 key={skill}
-                className="rounded-full bg-gray-800 px-3 py-1.5 text-[10px]"
+                className="rounded-full bg-gray-800 px-3 py-1 text-[10px]"
               >
                 {skill}
               </span>

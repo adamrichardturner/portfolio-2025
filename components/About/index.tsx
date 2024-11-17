@@ -21,6 +21,17 @@ const About = () => {
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <div className="space-y-4">
           <div className="relative h-[270px] w-full md:hidden">
+            {isLoading && (
+              <div className="absolute inset-0 z-10 flex items-center justify-center rounded-lg bg-black">
+                <Image
+                  src="/Spinner.svg"
+                  alt="Loading..."
+                  width={40}
+                  height={40}
+                  priority={true}
+                />
+              </div>
+            )}
             <Image
               src="/adam-fountain.png"
               alt="Adam Turner at a fountain"
@@ -34,7 +45,7 @@ const About = () => {
           <p className="text-sm text-gray-300">
             I have a strong passion for{' '}
             <span className="font-semibold text-white">
-              Front end Development
+              Front-end Development
             </span>{' '}
             and really enjoy working across the stack to deliver end-to-end
             features and projects.
@@ -72,7 +83,6 @@ const About = () => {
                   alt="Loading..."
                   width={40}
                   height={40}
-                  className="animate-spin"
                   priority={true}
                 />
               </div>
