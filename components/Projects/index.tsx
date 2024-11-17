@@ -43,7 +43,7 @@ const Projects = () => {
       className="text-white"
     >
       <div className="mb-6">
-        <h2 className="mb-0 font-inter text-3xl font-bold leading-none">
+        <h2 className="mb-0 font-inter text-2xl font-bold leading-none sm:text-3xl">
           Projects
         </h2>
       </div>

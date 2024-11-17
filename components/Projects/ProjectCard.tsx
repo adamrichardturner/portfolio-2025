@@ -2,6 +2,7 @@ import { Project } from '@/types/project';
 import Image from 'next/image';
 import { useState } from 'react';
 import { Button } from '../ui/button';
+import { FaGithub, FaLink } from 'react-icons/fa';
 
 interface ProjectCardProps {
   project: Project;
@@ -38,7 +39,7 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
           </p>
         </div>
         <div className="mt-4 flex flex-col gap-0">
-          <span className="m-0 pb-1 text-[10px] text-white">Skills</span>
+          <span className="m-0 pb-1 text-[10px] text-white">Tech Stack</span>
           <div className="mt-0 flex flex-wrap gap-2">
             {project.skills.map((skill) => (
               <span
@@ -60,9 +61,9 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
           >
             <Button
               variant="outline"
-              className="h-[30px] w-[76px] border-none bg-slate-100 py-0 text-sm text-black hover:bg-white"
+              className="h-[34px] w-[82px] border-none bg-slate-100 text-sm text-black hover:bg-white"
             >
-              GitHub
+              <FaGithub size={8} /> GitHub
             </Button>
           </a>
           <a
@@ -74,9 +75,9 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
           >
             <Button
               variant="outline"
-              className="h-[30px] w-[76px] border-none bg-secondary text-sm text-white hover:bg-lightSecondary hover:text-white"
+              className="h-[34px] w-[82px] border-none bg-secondary text-sm text-white hover:bg-lightSecondary hover:text-white"
             >
-              Live
+              <FaLink size={8} className="pr-0.5" /> Live
             </Button>
           </a>
         </div>

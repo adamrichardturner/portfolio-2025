@@ -19,7 +19,7 @@ export default function Page() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeIn' }}
-            className="h-full"
+            className="h-full pb-4"
           >
             <About />
           </motion.div>
@@ -31,7 +31,7 @@ export default function Page() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeIn' }}
-            className="h-full"
+            className="h-full pb-4"
           >
             <Projects />
           </motion.div>
@@ -43,7 +43,7 @@ export default function Page() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="items-between flex h-full flex-1"
+            className="h-full pb-4"
           >
             <Home />
           </motion.div>

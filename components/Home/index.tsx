@@ -8,8 +8,8 @@ const Home = () => {
   return (
     <div className="flex w-full flex-1 flex-col items-start justify-between sm:flex-row">
       <div className="flex h-full w-full flex-1 flex-col items-start space-y-4 text-gray-300">
-        <div className="mb-0 flex w-full flex-row items-center justify-start space-x-0 sm:space-x-3">
-          <h1 className="font-inter text-3xl font-bold leading-none text-white">
+        <div className="mb-auto flex w-full flex-row items-center justify-start space-x-0 sm:space-x-3">
+          <h1 className="font-inter text-2xl font-bold leading-none text-white sm:text-3xl">
             Adam Richard Turner
           </h1>
         </div>
@@ -41,7 +41,7 @@ const Home = () => {
         </div>
 
         <div className="space-y-4 font-inter">
-          <p className="max-w-[600px] text-sm lg:max-w-full">
+          <p className="max-w-[500px] pr-4 text-[14px] lg:max-w-full">
             <span className="font-bold text-white">Software Engineer</span>{' '}
             based in London, focused on crafting high-quality Front End UI for
             web applications using TypeScript and a variety of other tools.
@@ -70,8 +70,8 @@ const Home = () => {
         )}
         <Image
           src="/adam-thumb.png"
-          width={200}
-          height={200}
+          width={236}
+          height={236}
           alt="Adam Richard Turner"
           className="rounded-lg"
           priority={true}

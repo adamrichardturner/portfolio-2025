@@ -13,7 +13,7 @@ const About = () => {
       className="text-white"
     >
       <div className="mb-0">
-        <h2 className="mb-4 font-inter text-3xl font-bold leading-none md:mb-0">
+        <h2 className="mb-4 font-inter text-2xl font-bold leading-none sm:text-3xl md:mb-0">
           About Me
         </h2>
       </div>
@@ -42,7 +42,7 @@ const About = () => {
               onLoad={() => setIsLoading(false)}
             />
           </div>
-          <p className="text-sm text-gray-300">
+          <p className="max-w-[500px] text-[14px] text-gray-300">
             I have a strong passion for{' '}
             <span className="font-semibold text-white">
               Front-end Development
@@ -50,12 +50,11 @@ const About = () => {
             and really enjoy working across the stack to deliver end-to-end
             features and projects.
           </p>
-          <p className="text-sm text-gray-300">
-            Currently I work for a London based high-performing start-up which
-            specialises in cutting-edge mobile technology for the eCommerce
-            sector.
+          <p className="max-w-[500px] text-[14px] text-gray-300">
+            I work for a London based high-performing start-up which specialises
+            in cutting-edge mobile technology for the eCommerce sector.
           </p>
-          <p className="text-sm text-gray-300">
+          <p className="max-w-[500px] text-[14px] text-gray-300">
             Outside of work, I have a love for reading, staying fit, and caring
             for my tropical fish.
           </p>
@@ -74,7 +73,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="relative hidden h-[220px] w-full md:block">
+        <div className="relative hidden h-[236px] w-full md:block">
           <div className="w-full overflow-hidden rounded-lg">
             {isLoading && (
               <div className="absolute inset-0 z-10 flex items-center justify-center rounded-lg bg-black">
