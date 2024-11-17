@@ -56,8 +56,8 @@ export default function Page() {
   return (
     <div className="hero flex min-h-svh flex-col">
       <main className="flex flex-1 items-center justify-center p-4">
-        <div className="h-[570px] w-full max-w-4xl sm:h-[380px]">
-          <header className="mb-0 w-full pb-6">
+        <div className="h-[660px] w-full max-w-4xl sm:h-[380px]">
+          <header className="mb-0 w-full py-6">
             <Navigation
               selectedLink={selectedLink}
               setSelectedLink={setSelectedLink}
