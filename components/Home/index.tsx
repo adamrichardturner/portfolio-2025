@@ -6,9 +6,9 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="flex w-full flex-1 flex-col items-start justify-between sm:flex-row">
-      <div className="flex h-full w-full flex-1 flex-col items-start space-y-4 text-gray-300">
-        <div className="mb-auto flex w-full flex-row items-center justify-start space-x-0 sm:space-x-3">
+    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+      <div className="flex h-full w-full flex-1 flex-col items-start text-gray-300">
+        <div className="mb-4 flex w-full flex-row items-center justify-start space-x-0 sm:space-x-3">
           <h1 className="font-inter text-2xl font-bold leading-none text-white sm:text-3xl">
             Adam Richard Turner
           </h1>
@@ -29,10 +29,10 @@ const Home = () => {
           )}
           <div className="relative h-[270px] w-full sm:hidden">
             <Image
-              src="/adam-thumb.png"
+              src="/adam-finland.jpg"
               alt="Adam Richard Turner"
               fill
-              className="rounded-lg object-cover object-left [transform:scaleX(-1)]"
+              className="rounded-lg object-cover object-right"
               priority={true}
               loading="eager"
               onLoad={() => setIsLoading(false)}
@@ -56,7 +56,7 @@ const Home = () => {
       </div>
 
       {/* Desktop Image */}
-      <div className="relative hidden sm:block">
+      <div className="relative hidden aspect-video w-full sm:block">
         {isLoading && (
           <div className="absolute inset-0 z-10 flex items-center justify-center bg-black">
             <Image
@@ -69,11 +69,10 @@ const Home = () => {
           </div>
         )}
         <Image
-          src="/adam-thumb.png"
-          width={236}
-          height={236}
+          src="/adam-finland.jpg"
           alt="Adam Richard Turner"
-          className="rounded-lg [transform:scaleX(-1)]"
+          fill
+          className="rounded-lg object-cover"
           priority={true}
           loading="eager"
           quality={100}

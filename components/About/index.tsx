@@ -33,10 +33,10 @@ const About = () => {
               </div>
             )}
             <Image
-              src="/adam-fountain.png"
+              src="/adam-fountain.jpg"
               alt="Adam Turner at a fountain"
               fill
-              className="rounded-lg object-cover object-left"
+              className="rounded-lg object-cover object-center"
               loading="lazy"
               onLoad={() => setIsLoading(false)}
             />
@@ -86,7 +86,7 @@ const About = () => {
               </div>
             )}
             <Image
-              src="/adam-fountain.png"
+              src="/adam-fountain.jpg"
               alt="Adam Turner at a fountain"
               fill
               className="rounded-lg object-cover"
