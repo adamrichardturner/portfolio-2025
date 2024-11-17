@@ -55,22 +55,17 @@ export default function Page() {
 
   return (
     <div className="hero flex min-h-svh flex-col">
-      <header className="w-full">
+      <header className="h-[60px] w-full">
         <Navigation
           selectedLink={selectedLink}
           setSelectedLink={setSelectedLink}
         />
       </header>
-      <main className="flex h-full flex-1 items-center justify-center p-4 pt-[40px]">
-        <div className="min-h-[380px] w-full max-w-4xl md:-mt-[40px] md:h-[380px]">
+      <main className="flex h-full flex-1 items-center justify-center p-4 md:pt-[60px]">
+        <div className="min-h-[380px] w-full max-w-4xl md:h-[380px]">
           <AnimatePresence mode="wait">{renderedComponent}</AnimatePresence>
         </div>
       </main>
-      <footer className="w-full text-center">
-        <span className="flex h-[40px] items-center justify-center text-center text-xs text-white">
-          &copy; {new Date().getFullYear()} Adam Richard Turner
-        </span>
-      </footer>
     </div>
   );
 }

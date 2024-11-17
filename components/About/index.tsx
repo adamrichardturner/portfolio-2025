@@ -13,7 +13,9 @@ const About = () => {
       className="text-white"
     >
       <div className="mb-6">
-        <h2 className="mb-0 text-3xl font-bold leading-none">About Me</h2>
+        <h2 className="mb-0 font-inter text-3xl font-bold leading-none">
+          About Me
+        </h2>
       </div>
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -31,25 +33,24 @@ const About = () => {
             />
           </div>
           <p className="text-sm text-gray-300">
-            I&apos;m a{' '}
-            <span className="font-semibold text-white">Software Engineer</span>{' '}
-            with a strong passion for{' '}
+            I have a strong passion for{' '}
             <span className="font-semibold text-white">
-              Frontend Development
-            </span>
-            , currently{' '}
-            <span className="font-semibold text-white">based in London</span>.
+              Front end Development
+            </span>{' '}
+            and really enjoy working across the stack to deliver end-to-end
+            features and projects.
           </p>
           <p className="text-sm text-gray-300">
-            I work for a high-performing start-up specialising in cutting-edge
-            mobile technology for the eCommerce sector.
+            Currently I work for a London based high-performing start-up which
+            specialises in cutting-edge mobile technology for the eCommerce
+            sector.
           </p>
           <p className="text-sm text-gray-300">
             Outside of work, I have a love for reading, staying fit, and caring
             for my tropical fish.
           </p>
           <div className="space-y-2">
-            <h2 className="text-xl font-semibold text-secondary">Skills</h2>
+            <h2 className="text-md font-semibold text-secondary">Key Skills</h2>
             <div className="flex flex-wrap gap-2">
               {['TypeScript', 'React', 'Next.js', 'Express'].map((skill) => (
                 <span

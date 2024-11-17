@@ -4,7 +4,7 @@
       "title": "Invoice Tracker",
       "media": "/projects/invoice-tracker.gif",
       "description": "Clean design invoice tracker with smooth animations",
-      "skills": ["React", "Next.js", "Express"],
+      "skills": ["React", "Next", "Express"],
       "github": "https://github.com/adamrichardturner/invoice-tracker-frontend",
       "live": "https://invoice-tracker.adamrichardturner.dev/",
       "isPriority": true
@@ -20,8 +20,8 @@
     {
       "title": "Countries API",
       "media": "/projects/countries-api.png",
-      "description": "Frontend web application utilising infinite scroll",
-      "skills": ["Next.js", "TypeScript", "Shadcn/UI"],
+      "description": "Next.js application utilising infinite scroll and Framer Motion",
+      "skills": ["Next", "TypeScript", "Shadcn"],
       "github": "https://github.com/adamrichardturner/countries",
       "live": "https://countries.adamrichardturner.dev/"
     }

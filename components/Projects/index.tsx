@@ -43,17 +43,16 @@ const Projects = () => {
       className="text-white"
     >
       <div className="mb-6">
-        <h2 className="mb-0 text-3xl font-bold leading-none">Projects</h2>
-        <span className="text-sm text-gray-400">
-          A curated selection of some of my favourite projects
-        </span>
+        <h2 className="mb-0 font-inter text-3xl font-bold leading-none">
+          Projects
+        </h2>
       </div>
 
       <div className="relative overflow-hidden rounded-lg border border-gray-700 bg-black">
         <div className="projects-slider">
           <Slider {...settings}>
             {projects.map((project, index) => (
-              <div key={index} className="p-8 outline-none">
+              <div key={index} className="p-4 outline-none md:p-8">
                 <ProjectCard project={project} isDragging={false} />
               </div>
             ))}

@@ -10,7 +10,7 @@ import {
 const SocialLinks = () => {
   return (
     <>
-      <ul className="flex flex-row items-center space-x-2 text-4xl">
+      <ul className="flex flex-row items-center space-x-2 text-4xl text-white">
         <li>
           <a
             href="https://github.com/adamrichardturner/"

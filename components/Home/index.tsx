@@ -6,8 +6,8 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="flex h-full flex-row items-center justify-center md:space-x-4">
-      <div className="relative">
+    <div className="flex w-full flex-1 flex-row-reverse items-start justify-between">
+      <div className="flex h-full items-start justify-start">
         {isLoading && (
           <div className="absolute inset-0 z-10 flex items-center justify-center rounded-full bg-black lg:block">
             <Image
@@ -22,30 +22,33 @@ const Home = () => {
         )}
         <Image
           src="/adam-thumb.png"
-          width={300}
-          height={300}
+          width={200}
+          height={200}
           alt="Adam Richard Turner"
-          className="hidden rounded-full lg:block"
+          className="hidden scale-x-[-1] rounded-lg lg:block"
           priority={true}
           loading="eager"
           quality={100}
           onLoad={() => setIsLoading(false)}
         />
       </div>
-      <div className="space-y-4 text-white">
-        <div className="flex flex-row items-center justify-start space-x-0 md:space-x-3">
-          <h1 className="font-inter text-4xl font-semibold leading-none md:text-6xl">
+      <div className="flex h-full flex-1 flex-col items-start space-y-4 text-gray-300">
+        <div className="mb-6 flex flex-row items-center justify-start space-x-0 md:space-x-3">
+          <h1 className="font-inter text-3xl font-bold leading-none text-white">
             Adam Richard Turner
           </h1>
         </div>
-        <div className="space-y-4 font-inter">
-          <p className="max-w-[600px] text-sm lg:max-w-full">
-            <span className="font-bold text-secondary">Software Engineer</span>{' '}
+        <div className="max-w-[600px] space-y-4 font-inter">
+          <p className="text-sm lg:max-w-full">
+            <span className="font-bold text-white">Software Engineer</span>{' '}
             based in London, focused on crafting high-quality Front End UI for
             web applications using TypeScript and a variety of other tools.
           </p>
           <h3 className="text-[12px]">
-            Reach out to me via any of the below [Not looking for work]
+            Reach out to me via any of the below{' '}
+            <span className="font-semibold text-white">
+              [Not looking for work]
+            </span>
           </h3>
           <SocialLinks />
         </div>

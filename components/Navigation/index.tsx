@@ -9,7 +9,7 @@ const Navigation = ({ selectedLink, setSelectedLink }: NavigationProps) => {
   const links = ['Home', 'About Me', 'Projects'];
 
   return (
-    <nav className="flex flex-row items-center justify-center gap-8 py-6">
+    <nav className="flex h-full flex-row items-center justify-center gap-8">
       {links.map((link) => (
         <motion.button
           key={link}
