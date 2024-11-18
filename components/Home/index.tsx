@@ -14,15 +14,15 @@ const Home = () => {
       className="text-gray-200"
     >
       <div className="mb-0">
-        <h2 className="mb-4 font-inter text-3xl font-bold leading-none text-white md:mb-0">
+        <h1 className="mb-4 font-inter text-3xl font-bold leading-none text-white sm:mb-0">
           Adam Richard Turner
-        </h2>
+        </h1>
       </div>
 
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
         <div className="space-y-4">
           {/* Mobile Image */}
-          <div className="relative h-[270px] w-full md:hidden">
+          <div className="relative h-[270px] w-full sm:hidden">
             {isLoading && (
               <div className="absolute inset-0 z-10 flex items-center justify-center bg-black">
                 <Image
@@ -38,7 +38,7 @@ const Home = () => {
               src="/adam-fountain.jpg"
               alt="Adam Richard Turner"
               fill
-              className="rounded-lg object-cover object-center"
+              className="rounded-lg object-cover object-left"
               priority={true}
               loading="eager"
               onLoad={() => setIsLoading(false)}
@@ -48,15 +48,18 @@ const Home = () => {
           <div className="space-y-4 font-inter">
             <p className="max-w-[500px] pr-4 text-[14px] lg:max-w-full">
               <span className="font-bold text-white">Software Engineer</span> in
-              London, specializing in high-quality Front End UI development,
-              with versatile skills and flexibility to work across the stack
-              with various technologies.
+              London, specialising in high-quality Front End development.
             </p>
             <p className="max-w-[500px] pr-4 text-[14px] lg:max-w-full">
-              Expertise in React, Next.js, TypeScript, Node.js, and Express.
+              Experienced with a wide range of technologies and a passion for
+              creating beautiful and performant user experiences.
+            </p>
+            <p className="max-w-[500px] pr-4 text-[14px] lg:max-w-full">
+              Expertise in React, Next.js, TypeScript, Node.js, and Express,
+              amongst many other tools and technologies.
             </p>
 
-            <div className="pt-8">
+            <div className="pt-0 sm:pt-8">
               <h3 className="pb-2 text-[12px]">
                 Reach out to me via any of the below{' '}
               </h3>
@@ -66,7 +69,7 @@ const Home = () => {
         </div>
 
         {/* Desktop Image */}
-        <div className="relative mt-4 hidden h-[236px] w-full md:block">
+        <div className="relative mt-4 hidden h-[236px] w-full sm:block">
           <div className="w-full overflow-hidden rounded-lg">
             {isLoading && (
               <div className="absolute inset-0 z-10 flex items-center justify-center rounded-lg bg-black">

@@ -13,14 +13,14 @@ const About = () => {
       className="text-white"
     >
       <div className="mb-0">
-        <h2 className="mb-4 font-inter text-2xl font-bold leading-none sm:text-3xl md:mb-0">
+        <h2 className="mb-4 font-inter text-2xl font-bold leading-none sm:mb-0 sm:text-3xl">
           About Me
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
         <div className="space-y-4">
-          <div className="relative h-[270px] w-full md:hidden">
+          <div className="relative h-[270px] w-full sm:hidden">
             {isLoading && (
               <div className="absolute inset-0 z-10 flex items-center justify-center rounded-lg bg-black">
                 <Image
@@ -46,7 +46,7 @@ const About = () => {
             <span className="font-semibold text-white">
               Front End Development
             </span>{' '}
-            and really enjoy working across the stack to deliver end-to-end
+            but I also enjoy working across the stack to deliver end-to-end
             features and projects.
           </p>
           <p className="max-w-[500px] text-[14px] text-gray-200">
@@ -72,7 +72,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="relative mt-4 hidden h-[236px] w-full md:block">
+        <div className="relative mt-4 hidden h-[236px] w-full sm:block">
           <div className="w-full overflow-hidden rounded-lg">
             {isLoading && (
               <div className="absolute inset-0 z-10 flex items-center justify-center rounded-lg bg-black">
