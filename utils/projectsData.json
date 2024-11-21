@@ -11,15 +11,23 @@
     },
     {
       "title": "NumberNinja Mobile Game",
-      "media": "/projects/number-ninja.png",
+      "media": "/projects/number-ninja.jpg",
       "description": "iOS and Android mobile game built with React Native",
       "skills": ["React Native", "Express", "Firebase"],
       "github": "https://github.com/adamrichardturner/number-ninja",
       "live": "https://apps.apple.com/gb/app/number-ninja-math-game/id6670713997"
     },
     {
+      "title": "Feedback App",
+      "media": "/projects/product-feedback.jpg",
+      "description": "Full Stack CRUD application using Next.js & Supabase",
+      "skills": ["Next", "Supabase", "DNDKit"],
+      "github": "https://github.com/adamrichardturner/product-feedback",
+      "live": "https://feedback.adamrichardturner.dev/"
+    },
+    {
       "title": "Countries API",
-      "media": "/projects/countries-api.png",
+      "media": "/projects/countries-api.jpg",
       "description": "Next.js application utilising infinite scroll and Framer Motion",
       "skills": ["Next", "TypeScript", "Shadcn"],
       "github": "https://github.com/adamrichardturner/countries",

@@ -45,8 +45,8 @@ const About = () => {
             I have a strong passion for{' '}
             <span className="font-semibold text-white">
               Front End Development
-            </span>{' '}
-            but I also enjoy working across the stack to deliver end-to-end
+            </span>
+            . I also enjoy working across the stack to deliver end-to-end
             features and projects.
           </p>
           <p className="max-w-[500px] text-[14px] text-gray-200">

@@ -14,7 +14,7 @@ const Home = () => {
       className="text-gray-200"
     >
       <div className="mb-0">
-        <h1 className="mb-4 font-inter text-3xl font-bold leading-none text-white sm:mb-0">
+        <h1 className="mb-4 font-inter text-2xl font-bold leading-none text-white sm:mb-0 sm:text-3xl">
           Adam Richard Turner
         </h1>
       </div>
@@ -48,7 +48,7 @@ const Home = () => {
           <div className="space-y-4 font-inter">
             <p className="max-w-[500px] pr-4 text-[14px] lg:max-w-full">
               <span className="font-bold text-white">Software Engineer</span> in
-              London, specialising in high-quality Front End development.
+              London, specialising in Front End development.
             </p>
             <p className="max-w-[500px] pr-4 text-[14px] lg:max-w-full">
               Experienced with a wide range of technologies and a passion for
@@ -60,7 +60,7 @@ const Home = () => {
             </p>
 
             <div className="pt-0 sm:pt-8">
-              <h3 className="pb-2 text-[12px]">
+              <h3 className="hidden pb-2 text-[12px] sm:block">
                 Reach out to me via any of the below{' '}
               </h3>
               <SocialLinks />
