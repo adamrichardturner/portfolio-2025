@@ -7,17 +7,29 @@ import Navigation from '@/components/Navigation';
 import LoadingDots from '@/components/LoadingDots';
 
 const Home = dynamic(() => import('@/components/Home'), {
-  loading: () => <LoadingDots />,
+  loading: () => (
+    <div className="flex h-full w-full items-center justify-center">
+      <LoadingDots />
+    </div>
+  ),
   ssr: true,
 });
 
 const About = dynamic(() => import('@/components/About'), {
-  loading: () => <LoadingDots />,
+  loading: () => (
+    <div className="flex h-full w-full items-center justify-center">
+      <LoadingDots />
+    </div>
+  ),
   ssr: true,
 });
 
 const Projects = dynamic(() => import('@/components/Projects'), {
-  loading: () => <LoadingDots />,
+  loading: () => (
+    <div className="flex h-full w-full items-center justify-center">
+      <LoadingDots />
+    </div>
+  ),
   ssr: false,
 });
 

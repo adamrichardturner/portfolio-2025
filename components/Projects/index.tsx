@@ -53,7 +53,7 @@ const Projects = () => {
       </div>
 
       <div className="relative overflow-hidden rounded-lg border bg-background outline-primary">
-        <div className="projects-slider">
+        <div className="projects-slider md:h-[320px]">
           <Slider {...settings}>
             {projects.map((project, index) => (
               <div key={index} className="p-4 outline-none md:p-8">
