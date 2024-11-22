@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import SocialLinks from '../SocialLinks';
 import { motion } from 'framer-motion';
@@ -33,6 +35,7 @@ const Home = () => {
               alt="Adam Richard Turner"
               fill
               className="rounded-lg object-cover object-left drop-shadow-md"
+              sizes="(max-width: 768px) 100vw, 50vw"
               priority={true}
               loading="eager"
             />
@@ -70,7 +73,7 @@ const Home = () => {
               <ImageLoader />
             </div>
           )}
-          <div className="w-full overflow-hidden rounded-lg">
+          <div className="relative h-full w-full overflow-hidden rounded-lg">
             <Image
               src="/adam-fountain.jpg"
               alt="Adam Richard Turner"

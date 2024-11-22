@@ -31,6 +31,7 @@ const About = () => {
               alt="Adam Turner in Chinatown"
               fill
               className="rounded-lg object-cover object-left"
+              sizes="(max-width: 768px) 100vw, 50vw"
               loading="eager"
               onLoad={() => setIsLoading(false)}
             />
@@ -67,7 +68,7 @@ const About = () => {
         </div>
 
         <div className="relative mt-4 hidden h-[236px] w-full sm:block">
-          <div className="w-full overflow-hidden rounded-lg">
+          <div className="relative h-full w-full overflow-hidden rounded-lg">
             {isLoading && (
               <div className="absolute inset-0 z-10 flex items-center justify-center">
                 <ImageLoader />

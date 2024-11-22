@@ -68,7 +68,7 @@ export default function Page() {
 
   return (
     <div className="container flex min-h-svh flex-col">
-      <main className="flex flex-1 flex-col items-center justify-center p-4">
+      <main className="flex flex-1 flex-col items-center justify-center">
         <header className="mb-0 w-full pb-6">
           <Navigation
             selectedLink={selectedLink}
