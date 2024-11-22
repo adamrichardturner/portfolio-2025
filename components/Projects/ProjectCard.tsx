@@ -27,7 +27,8 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
             fill
             className="object-cover drop-shadow-md"
             sizes="(max-width: 768px) 100vw, 50vw"
-            loading="lazy"
+            priority={true}
+            loading="eager"
             onLoad={() => setIsLoading(false)}
           />
         </a>

@@ -1,10 +1,14 @@
-import Slider from 'react-slick';
+import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import projectsData from '@/utils/projectsData.json';
 import ProjectCard from './ProjectCard';
 import { Project } from '@/types/project';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import LoadingDots from '../LoadingDots';
+
+const Slider = dynamic(() => import('react-slick'), {
+  ssr: false,
+  loading: () => <LoadingDots />,
+});
 
 const Projects = () => {
   const projects = projectsData.projects as Project[];

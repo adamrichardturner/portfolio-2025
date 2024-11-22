@@ -1,11 +1,25 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
-import About from '@/components/About';
-import Projects from '@/components/Projects';
-import Home from '@/components/Home';
+import LoadingDots from '@/components/LoadingDots';
+
+const Home = dynamic(() => import('@/components/Home'), {
+  loading: () => <LoadingDots />,
+  ssr: true,
+});
+
+const About = dynamic(() => import('@/components/About'), {
+  loading: () => <LoadingDots />,
+  ssr: true,
+});
+
+const Projects = dynamic(() => import('@/components/Projects'), {
+  loading: () => <LoadingDots />,
+  ssr: false,
+});
 
 export default function Page() {
   const [selectedLink, setSelectedLink] = useState('Home');

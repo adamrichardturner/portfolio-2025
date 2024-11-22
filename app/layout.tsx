@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Inter, Roboto } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const roboto = Roboto({
