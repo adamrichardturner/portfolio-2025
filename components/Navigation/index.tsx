@@ -20,7 +20,7 @@ const Navigation = ({ selectedLink, setSelectedLink }: NavigationProps) => {
           <motion.button
             key={link}
             onClick={() => setSelectedLink(link)}
-            className="sm:text-md relative text-[14px]"
+            className="sm:text-md relative text-[12px]"
           >
             <span
               className={`transition-colors duration-200 ease-in-out ${

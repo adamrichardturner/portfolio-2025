@@ -106,6 +106,8 @@ module.exports = {
         lg: '1024px',
         xl: '1200px',
         '2xl': '1536px',
+        portrait: { raw: '(orientation: portrait)' },
+        landscape: { raw: '(orientation: landscape)' },
       },
       boxShadow: {
         md: `0px 6px 16px 0px rgba(0, 0, 0, 0.06)`,

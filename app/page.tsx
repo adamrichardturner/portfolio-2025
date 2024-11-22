@@ -33,7 +33,6 @@ export default function Page() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeIn' }}
-            className="h-[618px]"
           >
             <About />
           </motion.div>
@@ -45,7 +44,6 @@ export default function Page() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeIn' }}
-            className="h-[618px]"
           >
             <Projects />
           </motion.div>
@@ -67,7 +65,7 @@ export default function Page() {
   const renderedComponent = renderContent();
 
   return (
-    <div className="container flex min-h-svh flex-col">
+    <div className="container flex h-svh flex-col overflow-hidden py-4 portrait:overflow-hidden landscape:overflow-auto">
       <main className="flex flex-1 flex-col items-center justify-center">
         <header className="mb-0 w-full pb-6">
           <Navigation
@@ -75,7 +73,7 @@ export default function Page() {
             setSelectedLink={setSelectedLink}
           />
         </header>
-        <div className="h-[618px] w-full sm:h-[380px]">
+        <div className="h-[438px] w-full sm:h-[380px]">
           <AnimatePresence>{renderedComponent}</AnimatePresence>
         </div>
       </main>

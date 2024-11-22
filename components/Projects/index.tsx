@@ -46,11 +46,9 @@ const Projects = () => {
       exit={{ opacity: 0 }}
       className="text-white"
     >
-      <div className="mb-5">
-        <h2 className="mb-0 font-inter text-2xl font-bold leading-none text-foreground sm:text-3xl">
-          Projects
-        </h2>
-      </div>
+      <h2 className="mb-2 font-inter text-xl font-bold leading-none text-foreground sm:text-3xl">
+        Projects
+      </h2>
 
       <div className="relative overflow-hidden rounded-lg border bg-background outline-primary">
         <div className="projects-slider p-2">
