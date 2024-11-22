@@ -7,29 +7,17 @@ import Navigation from '@/components/Navigation';
 import LoadingDots from '@/components/LoadingDots';
 
 const Home = dynamic(() => import('@/components/Home'), {
-  loading: () => (
-    <div className="flex h-full w-full items-center justify-center">
-      <LoadingDots />
-    </div>
-  ),
+  loading: () => <LoadingDots />,
   ssr: true,
 });
 
 const About = dynamic(() => import('@/components/About'), {
-  loading: () => (
-    <div className="flex h-full w-full items-center justify-center">
-      <LoadingDots />
-    </div>
-  ),
+  loading: () => <LoadingDots />,
   ssr: true,
 });
 
 const Projects = dynamic(() => import('@/components/Projects'), {
-  loading: () => (
-    <div className="flex h-full w-full items-center justify-center">
-      <LoadingDots />
-    </div>
-  ),
+  loading: () => <LoadingDots />,
   ssr: false,
 });
 
@@ -45,7 +33,7 @@ export default function Page() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeIn' }}
-            className="h-full pb-4"
+            className="h-[618px]"
           >
             <About />
           </motion.div>
@@ -57,7 +45,7 @@ export default function Page() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeIn' }}
-            className="h-full pb-4"
+            className="h-[618px]"
           >
             <Projects />
           </motion.div>
@@ -69,7 +57,6 @@ export default function Page() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="h-full pb-4"
           >
             <Home />
           </motion.div>
@@ -80,15 +67,15 @@ export default function Page() {
   const renderedComponent = renderContent();
 
   return (
-    <div className="hero flex min-h-svh flex-col">
-      <main className="flex flex-1 items-center justify-center p-4">
-        <div className="h-[618px] w-full max-w-4xl sm:h-[380px]">
-          <header className="mb-0 w-full pb-6">
-            <Navigation
-              selectedLink={selectedLink}
-              setSelectedLink={setSelectedLink}
-            />
-          </header>
+    <div className="container flex min-h-svh flex-col">
+      <main className="flex flex-1 flex-col items-center justify-center p-4">
+        <header className="mb-0 w-full pb-6">
+          <Navigation
+            selectedLink={selectedLink}
+            setSelectedLink={setSelectedLink}
+          />
+        </header>
+        <div className="h-[618px] w-full sm:h-[380px]">
           <AnimatePresence>{renderedComponent}</AnimatePresence>
         </div>
       </main>

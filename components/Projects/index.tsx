@@ -20,7 +20,7 @@ const Projects = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    adaptiveHeight: false,
+    adaptiveHeight: true,
     autoplay: true,
     autoplaySpeed: 8000,
     cssEase: 'ease-in-out',
@@ -53,7 +53,7 @@ const Projects = () => {
       </div>
 
       <div className="relative overflow-hidden rounded-lg border bg-background outline-primary">
-        <div className="projects-slider sm:h-[320px]">
+        <div className="projects-slider p-2">
           <Slider {...settings}>
             {projects.map((project, index) => (
               <div key={index} className="p-4 outline-none md:p-8">

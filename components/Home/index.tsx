@@ -54,7 +54,7 @@ const Home = () => {
               amongst many other tools and technologies.
             </p>
 
-            <div className="pt-0 sm:pt-8">
+            <div className="pt-0">
               <h3 className="hidden pb-2 text-[12px] sm:block">
                 Reach out to me via any of the below{' '}
               </h3>

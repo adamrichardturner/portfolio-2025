@@ -1,5 +1,8 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { ModeToggle } from '@/components/ModeToggle';
+import { useTheme } from 'next-themes';
 
 interface NavigationProps {
   selectedLink: string;
@@ -8,6 +11,7 @@ interface NavigationProps {
 
 const Navigation = ({ selectedLink, setSelectedLink }: NavigationProps) => {
   const links = ['Home', 'About Me', 'Projects'];
+  const { theme, setTheme } = useTheme();
 
   return (
     <nav className="flex h-full flex-row items-center justify-between">
@@ -39,7 +43,7 @@ const Navigation = ({ selectedLink, setSelectedLink }: NavigationProps) => {
         ))}
       </div>
       <div>
-        <ModeToggle />
+        <ModeToggle theme={theme} setTheme={setTheme} />
       </div>
     </nav>
   );

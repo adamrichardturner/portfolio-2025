@@ -2,12 +2,26 @@
 
 import * as React from 'react';
 import { Moon, Sun } from 'lucide-react';
-import { useTheme } from 'next-themes';
-
 import { Button } from '@/components/ui/button';
+import { useEffect, useState } from 'react';
 
-export function ModeToggle() {
-  const { theme, setTheme } = useTheme();
+export function ModeToggle({
+  theme,
+  setTheme,
+}: {
+  theme: string | undefined;
+  setTheme: (theme: string) => void;
+}) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   const isDark = theme === 'dark';
 
   return (
@@ -15,7 +29,7 @@ export function ModeToggle() {
       <Button
         variant="ghost"
         size="icon"
-        onClick={() => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))}
+        onClick={() => setTheme(isDark ? 'light' : 'dark')}
         className="m-0 flex bg-muted p-0 text-lg outline-1 outline-primary hover:bg-mutedLighter"
       >
         <Sun

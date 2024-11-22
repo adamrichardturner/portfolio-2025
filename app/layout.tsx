@@ -4,6 +4,7 @@ import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const roboto = Roboto({
@@ -60,6 +61,7 @@ export default function RootLayout({
       className={`${inter.variable} ${roboto.variable}`}
       suppressHydrationWarning
     >
+      <GoogleAnalytics />
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
@@ -67,7 +69,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="hero">{children}</div>
         </ThemeProvider>
       </body>
     </html>
