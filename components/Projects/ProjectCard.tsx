@@ -1,8 +1,9 @@
 import { Project } from '@/types/project';
 import Image from 'next/image';
-import { useState } from 'react';
 import { Button } from '../ui/button';
 import { FaGithub, FaLink } from 'react-icons/fa';
+import ImageLoader from '../ImageLoader';
+import { useState } from 'react';
 
 interface ProjectCardProps {
   project: Project;
@@ -11,13 +12,12 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
   const [isLoading, setIsLoading] = useState(true);
-
   return (
     <div className="grid grid-cols-1 gap-6 p-1 pb-4 md:grid-cols-2 md:p-4">
       <div className="relative aspect-video w-full overflow-hidden rounded-lg drop-shadow-xl">
         {isLoading && (
-          <div className="absolute inset-0 z-10 flex items-center justify-center bg-transparent">
-            <Image src="/Spinner.svg" alt="Loading..." width={40} height={40} />
+          <div className="absolute inset-0 z-10 flex items-center justify-center">
+            <ImageLoader />
           </div>
         )}
         <a href={project.live} target="_blank" rel="noopener noreferrer">

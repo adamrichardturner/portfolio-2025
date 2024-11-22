@@ -1,8 +1,11 @@
 import Image from 'next/image';
 import SocialLinks from '../SocialLinks';
 import { motion } from 'framer-motion';
+import ImageLoader from '../ImageLoader';
+import { useState } from 'react';
 
 const Home = () => {
+  const [isLoading, setIsLoading] = useState(true);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -20,6 +23,11 @@ const Home = () => {
         <div className="space-y-4">
           {/* Mobile Image */}
           <div className="relative h-[270px] w-full sm:hidden">
+            {isLoading && (
+              <div className="absolute inset-0 z-10 flex items-center justify-center">
+                <ImageLoader />
+              </div>
+            )}
             <Image
               src="/adam-fountain.jpg"
               alt="Adam Richard Turner"
@@ -57,6 +65,11 @@ const Home = () => {
 
         {/* Desktop Image */}
         <div className="relative mt-4 hidden h-[236px] w-full sm:block">
+          {isLoading && (
+            <div className="absolute inset-0 z-10 flex items-center justify-center">
+              <ImageLoader />
+            </div>
+          )}
           <div className="w-full overflow-hidden rounded-lg">
             <Image
               src="/adam-fountain.jpg"
@@ -67,6 +80,7 @@ const Home = () => {
               priority={true}
               loading="eager"
               quality={100}
+              onLoad={() => setIsLoading(false)}
             />
           </div>
         </div>

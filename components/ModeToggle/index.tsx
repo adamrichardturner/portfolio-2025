@@ -8,17 +8,6 @@ import { Button } from '@/components/ui/button';
 
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = React.useState(false);
-
-  // useEffect only runs on the client, so now we can safely show the UI
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null; // Avoid hydration mismatch
-  }
-
   const isDark = theme === 'dark';
 
   return (
@@ -26,7 +15,7 @@ export function ModeToggle() {
       <Button
         variant="ghost"
         size="icon"
-        onClick={() => setTheme(isDark ? 'light' : 'dark')}
+        onClick={() => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))}
         className="m-0 flex bg-muted p-0 text-lg outline-1 outline-primary hover:bg-mutedLighter"
       >
         <Sun

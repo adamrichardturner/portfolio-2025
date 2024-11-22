@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import ImageLoader from '../ImageLoader';
+import { useState } from 'react';
 
 const About = () => {
+  const [isLoading, setIsLoading] = useState(true);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -18,12 +21,18 @@ const About = () => {
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
         <div className="space-y-4 text-primary">
           <div className="relative h-[270px] w-full sm:hidden">
+            {isLoading && (
+              <div className="absolute inset-0 z-10 flex items-center justify-center">
+                <ImageLoader />
+              </div>
+            )}
             <Image
               src="/adam-chinatown.jpg"
               alt="Adam Turner in Chinatown"
               fill
               className="rounded-lg object-cover object-left"
               loading="eager"
+              onLoad={() => setIsLoading(false)}
             />
           </div>
           <p className="max-w-[500px] text-[14px]">
@@ -59,6 +68,11 @@ const About = () => {
 
         <div className="relative mt-4 hidden h-[236px] w-full sm:block">
           <div className="w-full overflow-hidden rounded-lg">
+            {isLoading && (
+              <div className="absolute inset-0 z-10 flex items-center justify-center">
+                <ImageLoader />
+              </div>
+            )}
             <Image
               src="/adam-chinatown.jpg"
               alt="Adam Turner in Chinatown"
@@ -68,6 +82,7 @@ const About = () => {
               priority={true}
               loading="eager"
               quality={100}
+              onLoad={() => setIsLoading(false)}
             />
           </div>
         </div>
