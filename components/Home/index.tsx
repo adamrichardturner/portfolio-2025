@@ -8,6 +8,7 @@ import { useState } from 'react';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}

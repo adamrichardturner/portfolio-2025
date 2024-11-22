@@ -12,6 +12,7 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
   const [isLoading, setIsLoading] = useState(true);
+
   return (
     <div className="grid grid-cols-1 gap-6 p-1 pb-4 md:grid-cols-2 md:p-4">
       <div className="relative aspect-video h-full w-full overflow-hidden rounded-lg sm:drop-shadow-xl">

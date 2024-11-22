@@ -10,8 +10,8 @@ interface NavigationProps {
 }
 
 const Navigation = ({ selectedLink, setSelectedLink }: NavigationProps) => {
-  const links = ['Home', 'About Me', 'Projects'];
   const { theme, setTheme } = useTheme();
+  const links = ['Home', 'About Me', 'Projects'];
 
   return (
     <nav className="flex h-full flex-row items-center justify-between">
