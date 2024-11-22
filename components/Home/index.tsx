@@ -14,7 +14,7 @@ const Home = () => {
       className="text-gray-200"
     >
       <div className="mb-0">
-        <h1 className="mb-4 font-inter text-2xl font-bold leading-none text-white sm:mb-0 sm:text-3xl">
+        <h1 className="mb-4 font-inter text-2xl font-bold leading-none text-foreground sm:mb-0 sm:text-3xl">
           Adam Richard Turner
         </h1>
       </div>
@@ -38,17 +38,19 @@ const Home = () => {
               src="/adam-fountain.jpg"
               alt="Adam Richard Turner"
               fill
-              className="rounded-lg object-cover object-left"
+              className="rounded-lg object-cover object-left drop-shadow-md"
               priority={true}
               loading="eager"
               onLoad={() => setIsLoading(false)}
             />
           </div>
 
-          <div className="space-y-4 font-inter">
+          <div className="space-y-4 font-inter text-primary">
             <p className="max-w-[500px] pr-4 text-[14px] lg:max-w-full">
-              <span className="font-bold text-white">Software Engineer</span> in
-              London, specialising in Front End development.
+              <span className="font-bold text-foreground">
+                Software Engineer
+              </span>{' '}
+              in London, specialising in Front End development.
             </p>
             <p className="max-w-[500px] pr-4 text-[14px] lg:max-w-full">
               Experienced with a wide range of technologies and a passion for
@@ -86,7 +88,7 @@ const Home = () => {
               src="/adam-fountain.jpg"
               alt="Adam Richard Turner"
               fill
-              className="rounded-lg object-cover"
+              className="rounded-lg object-cover drop-shadow-md"
               sizes="(max-width: 768px) 100vw, 50vw"
               priority={true}
               loading="eager"

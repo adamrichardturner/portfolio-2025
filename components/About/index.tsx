@@ -10,16 +10,16 @@ const About = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="text-white"
+      className="text-primary"
     >
       <div className="mb-0">
-        <h2 className="mb-4 font-inter text-2xl font-bold leading-none sm:mb-0 sm:text-3xl">
+        <h2 className="mb-4 font-inter text-2xl font-bold leading-none text-foreground sm:mb-0 sm:text-3xl">
           About Me
         </h2>
       </div>
 
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-        <div className="space-y-4">
+        <div className="space-y-4 text-primary">
           <div className="relative h-[270px] w-full sm:hidden">
             {isLoading && (
               <div className="absolute inset-0 z-10 flex items-center justify-center rounded-lg bg-black">
@@ -41,29 +41,29 @@ const About = () => {
               onLoad={() => setIsLoading(false)}
             />
           </div>
-          <p className="max-w-[500px] text-[14px] text-gray-200">
+          <p className="max-w-[500px] text-[14px]">
             I have a strong passion for{' '}
-            <span className="font-semibold text-white">
+            <span className="font-semibold text-foreground">
               Front End Development
             </span>
             . I also enjoy working across the stack to deliver end-to-end
             features and projects.
           </p>
-          <p className="max-w-[500px] text-[14px] text-gray-200">
+          <p className="max-w-[500px] text-[14px]">
             I work for a high-performing start-up in London which specialises in
             cutting-edge mobile technology for the eCommerce sector.
           </p>
-          <p className="max-w-[500px] text-[14px] text-gray-200">
+          <p className="max-w-[500px] text-[14px]">
             Outside of work, I have a love for reading, staying fit, and caring
             for my tropical fish.
           </p>
           <div className="space-y-2">
-            <h2 className="text-md font-semibold text-secondary">Key Skills</h2>
+            <h2 className="text-sm font-semibold text-primary">Key Skills</h2>
             <div className="flex flex-wrap gap-2">
               {['TypeScript', 'React', 'Next', 'Express'].map((skill) => (
                 <span
                   key={skill}
-                  className="rounded-full bg-gray-800 px-3 py-1 text-[10px] text-white"
+                  className="cursor-default rounded-full bg-gray-800 px-3 py-1 text-[10px] text-white"
                 >
                   {skill}
                 </span>
@@ -89,7 +89,7 @@ const About = () => {
               src="/adam-chinatown.jpg"
               alt="Adam Turner in Chinatown"
               fill
-              className="rounded-lg object-cover"
+              className="rounded-lg object-cover drop-shadow-xl"
               sizes="(max-width: 768px) 100vw, 50vw"
               priority={true}
               loading="eager"

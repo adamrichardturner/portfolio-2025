@@ -10,14 +10,14 @@ import {
 const SocialLinks = () => {
   return (
     <>
-      <ul className="flex flex-row items-center space-x-2 text-3xl text-white sm:text-4xl">
+      <ul className="flex flex-row items-center space-x-2 text-3xl sm:text-4xl [&_svg]:block [&_svg]:leading-none">
         <li>
           <a
             href="mailto:hello@adamrichardturner.dev"
             target="_blank"
             aria-label="Email"
           >
-            <FaSquareEnvelope className="rounded transition-shadow hover:md:shadow-md hover:md:shadow-secondary" />
+            <FaSquareEnvelope className="align-top text-primary transition-shadow hover:text-popover-foreground hover:shadow-md" />
           </a>
         </li>
         <li>
@@ -26,7 +26,7 @@ const SocialLinks = () => {
             target="_blank"
             aria-label="GitHub"
           >
-            <FaSquareGithub className="rounded transition-shadow hover:md:shadow-md hover:md:shadow-secondary" />
+            <FaSquareGithub className="align-top text-primary transition-shadow hover:text-popover-foreground hover:shadow-md" />
           </a>
         </li>
         <li>
@@ -35,34 +35,34 @@ const SocialLinks = () => {
             target="_blank"
             aria-label="X Twitter"
           >
-            <FaSquareXTwitter className="rounded transition-shadow hover:md:shadow-md hover:md:shadow-secondary" />
+            <FaSquareXTwitter className="align-top text-primary transition-shadow hover:text-popover-foreground hover:shadow-md" />
           </a>
         </li>
-        <li>
+        <li className="border-none">
           <a
             href="https://www.linkedin.com/in/adamrichardturner88/"
             target="_blank"
             aria-label="Linkedin"
           >
-            <FaLinkedin className="rounded transition-shadow hover:md:shadow-md hover:md:shadow-secondary" />
+            <FaLinkedin className="align-top text-primary transition-shadow hover:text-popover-foreground hover:shadow-md" />
           </a>
         </li>
-        <li className="h-[27.34px] w-[27.34px] rounded bg-white sm:h-[34.17px] sm:w-[34.17px]">
+        <li className="h-[27.34px] w-[27.34px] rounded bg-primary sm:h-[34.17px] sm:w-[34.17px]">
           <a
             href="https://adamrichardturner.medium.com/"
             target="_blank"
             aria-label="Medium"
           >
-            <FaMedium className="h-[27.34px] w-[27.34px] rounded p-1.5 text-black transition-shadow sm:h-[34.17px] sm:w-[34.17px] hover:md:shadow-md hover:md:shadow-secondary" />
+            <FaMedium className="h-[27.34px] w-[27.34px] rounded p-1.5 text-card shadow-xl transition-shadow hover:bg-popover-foreground sm:h-[34.17px] sm:w-[34.17px] hover:md:shadow-md" />
           </a>
         </li>
-        <li>
+        <li className="border-none">
           <a
             href="https://www.youtube.com/@adamrichardturner"
             target="_blank"
             aria-label="YouTube"
           >
-            <FaSquareYoutube className="rounded transition-shadow hover:md:shadow-md hover:md:shadow-secondary" />
+            <FaSquareYoutube className="border-none align-top text-primary transition-shadow hover:text-popover-foreground hover:md:shadow-md" />
           </a>
         </li>
       </ul>

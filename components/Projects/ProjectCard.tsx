@@ -14,26 +14,30 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
 
   return (
     <div className="grid grid-cols-1 gap-6 p-1 pb-4 md:grid-cols-2 md:p-4">
-      <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+      <div className="relative aspect-video w-full overflow-hidden rounded-lg drop-shadow-xl">
         {isLoading && (
-          <div className="absolute inset-0 z-10 flex items-center justify-center bg-black">
+          <div className="absolute inset-0 z-10 flex items-center justify-center bg-transparent">
             <Image src="/Spinner.svg" alt="Loading..." width={40} height={40} />
           </div>
         )}
-        <Image
-          src={project.media}
-          alt={project.title}
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, 50vw"
-          loading="lazy"
-          onLoad={() => setIsLoading(false)}
-        />
+        <a href={project.live} target="_blank" rel="noopener noreferrer">
+          <Image
+            src={project.media}
+            alt={project.title}
+            fill
+            className="object-cover drop-shadow-md"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            loading="lazy"
+            onLoad={() => setIsLoading(false)}
+          />
+        </a>
       </div>
       <div className="flex flex-col justify-between">
         <div>
-          <h2 className="mb-2 text-xl font-bold">{project.title}</h2>
-          <p className="text-sm leading-tight text-gray-200">
+          <h2 className="mb-2 text-xl font-bold text-foreground">
+            {project.title}
+          </h2>
+          <p className="text-sm leading-tight text-primary">
             {project.description}
           </p>
         </div>
@@ -60,7 +64,7 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
           >
             <Button
               variant="outline"
-              className="h-[34px] w-[82px] border-none bg-slate-100 text-sm text-black hover:bg-white"
+              className="h-[34px] w-[82px] border-none bg-gray-200 text-sm text-darkBackground hover:bg-gray-100 hover:text-black"
             >
               <FaGithub size={8} /> GitHub
             </Button>
@@ -74,9 +78,10 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
           >
             <Button
               variant="outline"
-              className="h-[34px] w-[82px] border-none bg-secondary text-sm text-white hover:bg-lightSecondary hover:text-white"
+              className="flex h-[34px] w-[82px] items-center justify-center border-none bg-[#42674f] text-sm text-justWhite hover:bg-lightSecondary hover:text-whitest"
             >
-              <FaLink size={8} className="pr-0.5" /> Live
+              <FaLink size={8} className="pr-1" />
+              Live
             </Button>
           </a>
         </div>

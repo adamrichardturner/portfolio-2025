@@ -43,12 +43,12 @@ const Projects = () => {
       className="text-white"
     >
       <div className="mb-5">
-        <h2 className="mb-0 font-inter text-2xl font-bold leading-none sm:text-3xl">
+        <h2 className="mb-0 font-inter text-2xl font-bold leading-none text-foreground sm:text-3xl">
           Projects
         </h2>
       </div>
 
-      <div className="relative overflow-hidden rounded-lg border border-gray-700 bg-black">
+      <div className="relative overflow-hidden rounded-lg border bg-background outline-primary">
         <div className="projects-slider">
           <Slider {...settings}>
             {projects.map((project, index) => (
