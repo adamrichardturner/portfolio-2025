@@ -1,21 +1,21 @@
 {
   "projects": [
     {
-      "title": "Invoice Tracker",
-      "media": "/projects/invoice-tracker.gif",
-      "description": "Clean design invoice tracker with smooth animations",
-      "skills": ["React", "Next", "Express"],
-      "github": "https://github.com/adamrichardturner/invoice-tracker-frontend",
-      "live": "https://invoice-tracker.adamrichardturner.dev/",
-      "isPriority": true
-    },
-    {
       "title": "Feedback App",
       "media": "/projects/product-feedback.jpg",
       "description": "Full Stack CRUD application using Next.js & Supabase",
       "skills": ["Next", "Supabase", "DNDKit"],
       "github": "https://github.com/adamrichardturner/product-feedback",
       "live": "https://feedback.adamrichardturner.dev/"
+    },
+    {
+      "title": "Invoice Tracker",
+      "media": "/projects/invoice-tracker.jpg",
+      "description": "Clean design invoice tracker with smooth animations",
+      "skills": ["React", "Next", "Express"],
+      "github": "https://github.com/adamrichardturner/invoice-tracker-frontend",
+      "live": "https://invoice-tracker.adamrichardturner.dev/",
+      "isPriority": true
     },
     {
       "title": "NumberNinja Mobile Game",
