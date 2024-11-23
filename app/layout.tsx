@@ -63,12 +63,7 @@ export default function RootLayout({
     >
       <GoogleAnalytics />
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider attribute="class" defaultTheme="light">
           <div className="hero">{children}</div>
         </ThemeProvider>
       </body>
