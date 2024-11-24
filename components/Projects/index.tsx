@@ -54,7 +54,6 @@ const Projects = () => {
       </h2>
 
       <p className="max-w-[400px] pb-2 text-[12px] text-primary">
-        I cannot share my professional work for obvious reasons. <br />
         Here are a selection of side projects I enjoyed building.
       </p>
 
