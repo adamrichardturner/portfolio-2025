@@ -184,7 +184,7 @@ p {
   cursor: not-allowed;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 767px) {
   .projects-slider .slick-prev:before,
   .projects-slider .slick-next:before {
     display: none;

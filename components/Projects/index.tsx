@@ -51,7 +51,7 @@ const Projects = () => {
       </h2>
 
       <div className="relative overflow-hidden rounded-lg border bg-background outline-primary">
-        <div className="projects-slider p-2">
+        <div className="projects-slider p-0 sm:p-1">
           <Slider {...settings}>
             {projects.map((project, index) => (
               <div key={index} className="p-4 outline-none md:p-8">
