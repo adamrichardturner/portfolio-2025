@@ -52,6 +52,7 @@ function PageContent() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeIn' }}
+            className="h-full w-full"
           >
             <About />
           </motion.div>
@@ -63,6 +64,7 @@ function PageContent() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeIn' }}
+            className="h-full w-full"
           >
             <Projects />
           </motion.div>
@@ -74,12 +76,15 @@ function PageContent() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
+            className="h-full w-full"
           >
             <Home />
           </motion.div>
         );
     }
   };
+
+  const selectedComponent = renderContent();
 
   return (
     <div className="container flex h-svh flex-col overflow-hidden pb-2 portrait:overflow-hidden landscape:overflow-auto">
@@ -91,7 +96,7 @@ function PageContent() {
           />
         </header>
         <div className="h-[438px] w-full sm:h-[380px]">
-          <AnimatePresence>{renderContent()}</AnimatePresence>
+          <AnimatePresence>{selectedComponent}</AnimatePresence>
         </div>
       </main>
     </div>

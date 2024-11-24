@@ -17,7 +17,7 @@ const SocialLinks = () => {
             target="_blank"
             aria-label="Email"
           >
-            <FaSquareEnvelope className="absolute h-[34.17px] w-[34.17px] rounded text-lightBackground transition-all hover:text-contrast" />
+            <FaSquareEnvelope className="absolute h-[34.17px] w-[34.17px] rounded text-contrast transition-all hover:text-lightBackground" />
           </a>
         </li>
         <li className="relative h-[34.17px] w-[34.17px] rounded bg-primary hover:drop-shadow-lg">
@@ -26,7 +26,7 @@ const SocialLinks = () => {
             target="_blank"
             aria-label="GitHub"
           >
-            <FaSquareGithub className="absolute h-[34.17px] w-[34.17px] rounded text-lightBackground transition-all hover:text-contrast" />
+            <FaSquareGithub className="absolute h-[34.17px] w-[34.17px] rounded text-contrast transition-all hover:text-lightBackground" />
           </a>
         </li>
         <li className="relative h-[34.17px] w-[34.17px] rounded bg-primary hover:drop-shadow-lg">
@@ -35,7 +35,7 @@ const SocialLinks = () => {
             target="_blank"
             aria-label="X Twitter"
           >
-            <FaSquareXTwitter className="absolute h-[34.17px] w-[34.17px] rounded text-lightBackground transition-all hover:text-contrast" />
+            <FaSquareXTwitter className="absolute h-[34.17px] w-[34.17px] rounded text-contrast transition-all hover:text-lightBackground" />
           </a>
         </li>
         <li className="relative h-[34.17px] w-[34.17px] rounded bg-primary hover:drop-shadow-lg">
@@ -44,7 +44,7 @@ const SocialLinks = () => {
             target="_blank"
             aria-label="Linkedin"
           >
-            <FaLinkedin className="absolute h-[34.17px] w-[34.17px] rounded text-lightBackground transition-all hover:text-contrast" />
+            <FaLinkedin className="absolute h-[34.17px] w-[34.17px] rounded text-contrast transition-all hover:text-lightBackground" />
           </a>
         </li>
         <li className="relative h-[34.17px] w-[34.17px] rounded bg-primary hover:drop-shadow-lg">
@@ -53,7 +53,7 @@ const SocialLinks = () => {
             target="_blank"
             aria-label="YouTube"
           >
-            <FaSquareYoutube className="absolute h-[34.17px] w-[34.17px] rounded text-lightBackground transition-all hover:text-contrast" />
+            <FaSquareYoutube className="absolute h-[34.17px] w-[34.17px] rounded text-contrast transition-all hover:text-lightBackground" />
           </a>
         </li>
       </ul>
