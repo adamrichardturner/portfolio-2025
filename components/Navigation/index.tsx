@@ -15,7 +15,7 @@ const Navigation = ({ selectedLink, setSelectedLink }: NavigationProps) => {
 
   return (
     <nav className="flex h-full flex-row items-center justify-between">
-      <div className="drop-shadow-white sm:gap-6.5 flex flex-row items-center justify-start gap-6 rounded-md bg-muted px-6 py-2 drop-shadow-sm">
+      <div className="sm:gap-6.5 flex flex-row items-center justify-start gap-6 rounded-md bg-muted px-6 py-2 drop-shadow-sm">
         {links.map((link) => (
           <motion.button
             key={link}
@@ -25,8 +25,8 @@ const Navigation = ({ selectedLink, setSelectedLink }: NavigationProps) => {
             <span
               className={`transition-colors duration-200 ease-in-out ${
                 selectedLink === link
-                  ? 'font-[600] text-card-foreground'
-                  : 'text-primary'
+                  ? 'font-[600]'
+                  : 'text-primary hover:text-card-foreground'
               } `}
             >
               {link}

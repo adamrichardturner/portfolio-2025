@@ -57,11 +57,14 @@ const Projects = () => {
         Here are a selection of side projects I enjoyed building.
       </p>
 
-      <div className="relative overflow-hidden rounded-xl border bg-lightBackground outline-primary">
+      <div className="relative overflow-hidden rounded-xl border bg-popover outline-primary drop-shadow">
         <div className="projects-slider p-0 sm:p-1">
           <Slider {...settings}>
             {projects.map((project, index) => (
-              <div key={index} className="p-4 outline-none sm:p-6">
+              <div
+                key={index}
+                className="px-2 py-4 outline-none sm:px-6 sm:py-6"
+              >
                 <ProjectCard project={project} isDragging={false} />
               </div>
             ))}

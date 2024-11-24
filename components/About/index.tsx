@@ -46,7 +46,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="relative hidden h-[236px] w-full sm:block">
+        <div className="relative hidden h-[236px] w-full drop-shadow-xl sm:block">
           <div className="relative h-full w-full overflow-hidden rounded-lg">
             {isLoading && (
               <div className="absolute inset-0 z-10 flex items-center justify-center">
@@ -57,7 +57,7 @@ const About = () => {
               src="/adam-chinatown.jpg"
               alt="Adam Turner in Chinatown"
               fill
-              className="rounded-lg object-cover drop-shadow-xl"
+              className="rounded-lg object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
               priority={true}
               loading="eager"

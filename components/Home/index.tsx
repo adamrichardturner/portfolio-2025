@@ -23,22 +23,26 @@ const Home = () => {
       </div>
 
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-        <div className="space-y-4 font-inter text-primary">
-          <p className="max-w-[500px] pr-4 text-[14px] lg:max-w-full">
-            <span className="font-bold text-foreground">Software Engineer</span>{' '}
-            in London, specialising in Front End development.
-          </p>
-          <p className="max-w-[500px] pr-4 text-[14px] lg:max-w-full">
-            Experienced with a wide range of technologies and a passion for
-            creating beautiful and performant user experiences.
-          </p>
-          <p className="max-w-[500px] pr-4 text-[14px] lg:max-w-full">
-            Expertise in React, Next.js, TypeScript, Node.js, and Express,
-            amongst many other tools and technologies.
-          </p>
+        <div className="flex flex-col justify-between space-y-4 font-inter text-primary">
+          <div className="space-y-4">
+            <p className="max-w-[500px] pr-4 text-[14px] lg:max-w-full">
+              <span className="font-bold text-foreground">
+                Software Engineer
+              </span>{' '}
+              in London, specialising in Front End development.
+            </p>
+            <p className="max-w-[500px] pr-4 text-[14px] lg:max-w-full">
+              Experienced with a wide range of technologies and a passion for
+              creating beautiful and performant user experiences.
+            </p>
+            <p className="max-w-[500px] pr-4 text-[14px] lg:max-w-full">
+              Expertise in React, Next.js, TypeScript, Node.js, and Express,
+              amongst many other tools and technologies.
+            </p>
+          </div>
 
           <div className="pt-0">
-            <h3 className="hidden pb-2 text-[12px] sm:block">
+            <h3 className="pb-2 text-[12px]">
               Reach out to me via any of the below{' '}
             </h3>
             <SocialLinks />
@@ -52,7 +56,7 @@ const Home = () => {
               <ImageLoader />
             </div>
           )}
-          <div className="relative h-full w-full overflow-hidden rounded-lg">
+          <div className="relative h-full w-full overflow-hidden rounded-lg drop-shadow-xl">
             <Image
               src="/adam-fountain.jpg"
               alt="Adam Richard Turner"

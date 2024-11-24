@@ -32,6 +32,10 @@ module.exports = {
           DEFAULT: 'hsl(var(--light-background))',
           foreground: 'hsl(var(--light-background-foreground))',
         },
+        contrast: {
+          DEFAULT: 'hsl(var(--contrast))',
+          foreground: 'hsl(var(--contrast-foreground))',
+        },
         tertiary: '#484848',
         body: '#1E1E1E',
         caption: '#3A3A3A',

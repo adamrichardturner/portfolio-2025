@@ -14,8 +14,8 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="grid grid-cols-1 gap-6 bg-transparent p-1 pb-4 md:grid-cols-2">
-      <div className="relative aspect-video h-full w-full overflow-hidden rounded-lg bg-lightBackground drop-shadow-xl">
+    <div className="grid grid-cols-1 gap-6 bg-transparent px-2 pb-4 md:grid-cols-2">
+      <div className="relative aspect-video h-full w-full rounded-lg bg-lightBackground drop-shadow-xl">
         {isLoading && (
           <div className="absolute inset-0 z-10 flex items-center justify-center">
             <ImageLoader />
@@ -32,7 +32,7 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
               src={project.media}
               alt={project.title}
               fill
-              className="rounded-lg bg-transparent object-cover"
+              className="rounded-lg bg-lightBackground object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
               priority={project.isPriority ?? true}
               loading="eager"
