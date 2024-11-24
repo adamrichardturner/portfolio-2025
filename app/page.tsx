@@ -82,7 +82,7 @@ function PageContent() {
   };
 
   return (
-    <div className="container flex h-svh flex-col overflow-hidden py-4 portrait:overflow-hidden landscape:overflow-auto">
+    <div className="container flex h-svh flex-col overflow-hidden pb-2 portrait:overflow-hidden landscape:overflow-auto">
       <main className="flex flex-1 flex-col items-center justify-center">
         <header className="mb-0 w-full pb-6">
           <Navigation
