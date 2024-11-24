@@ -14,20 +14,25 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="grid grid-cols-1 gap-6 p-1 pb-4 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-6 bg-transparent p-1 pb-4 md:grid-cols-2">
       <div className="relative aspect-video h-full w-full overflow-hidden rounded-lg bg-lightBackground drop-shadow-xl">
         {isLoading && (
           <div className="absolute inset-0 z-10 flex items-center justify-center">
             <ImageLoader />
           </div>
         )}
-        <a href={project.live} target="_blank" rel="noopener noreferrer">
-          <div className="relative h-full w-full rounded-lg bg-lightBackground">
+        <a
+          href={project.live}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-transparent"
+        >
+          <div className="relative h-full w-full rounded-lg bg-transparent">
             <Image
               src={project.media}
               alt={project.title}
               fill
-              className="rounded-lg object-cover drop-shadow-md"
+              className="rounded-lg bg-transparent object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
               priority={project.isPriority ?? true}
               loading="eager"
