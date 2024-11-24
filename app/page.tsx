@@ -1,7 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import LoadingDots from '@/components/LoadingDots';
@@ -25,7 +25,7 @@ const Projects = dynamic(() => import('@/components/Projects'), {
 
 const validUrls = Object.values(displayToUrlMap);
 
-export default function Page() {
+function PageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [selectedLink, setSelectedLink] = useState('Home');
@@ -81,8 +81,6 @@ export default function Page() {
     }
   };
 
-  const renderedComponent = renderContent();
-
   return (
     <div className="container flex h-svh flex-col overflow-hidden py-4 portrait:overflow-hidden landscape:overflow-auto">
       <main className="flex flex-1 flex-col items-center justify-center">
@@ -93,9 +91,17 @@ export default function Page() {
           />
         </header>
         <div className="h-[438px] w-full sm:h-[380px]">
-          <AnimatePresence>{renderedComponent}</AnimatePresence>
+          <AnimatePresence>{renderContent()}</AnimatePresence>
         </div>
       </main>
     </div>
+  );
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={<LoadingDots />}>
+      <PageContent />
+    </Suspense>
   );
 }
