@@ -47,17 +47,19 @@ const About = () => {
         </div>
 
         <div className="relative hidden h-[236px] w-full drop-shadow-xl sm:block">
+          {isLoading && (
+            <div className="absolute inset-0 z-10 flex items-center justify-center bg-lightBackground">
+              <ImageLoader />
+            </div>
+          )}
           <div className="relative h-full w-full overflow-hidden rounded-lg">
-            {isLoading && (
-              <div className="absolute inset-0 z-10 flex items-center justify-center">
-                <ImageLoader />
-              </div>
-            )}
             <Image
               src="/adam-chinatown.jpg"
               alt="Adam Turner in Chinatown"
               fill
-              className="rounded-lg object-cover"
+              className={`rounded-lg object-cover transition-opacity duration-300 ${
+                isLoading ? 'opacity-0' : 'opacity-100'
+              }`}
               sizes="(max-width: 768px) 100vw, 50vw"
               priority={true}
               loading="eager"

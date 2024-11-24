@@ -22,7 +22,7 @@ const Projects = () => {
     arrows: true,
     adaptiveHeight: true,
     autoplay: true,
-    autoplaySpeed: 8000,
+    autoplaySpeed: 6000,
     cssEase: 'ease-in-out',
     className: 'center',
     centerMode: false,

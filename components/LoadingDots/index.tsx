@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 const LoadingDots = () => (
-  <div className="flex h-[400px] items-center justify-center space-x-2">
+  <div className="flex h-[438px] w-full items-center justify-center space-x-2 sm:h-[380px]">
     <motion.div
       className="h-2 w-2 rounded-full bg-primary"
       animate={{ y: [0, -10, 0] }}
