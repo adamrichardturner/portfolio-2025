@@ -53,6 +53,11 @@ const Projects = () => {
         Projects
       </h2>
 
+      <p className="max-w-[400px] pb-2 text-[12px] text-primary">
+        I cannot share my professional work for obvious reasons. <br />
+        Here are a selection of side projects I enjoyed building.
+      </p>
+
       <div className="relative overflow-hidden rounded-xl border bg-lightBackground outline-primary">
         <div className="projects-slider p-0 sm:p-1">
           <Slider {...settings}>

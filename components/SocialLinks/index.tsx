@@ -10,7 +10,7 @@ import {
 const SocialLinks = () => {
   return (
     <>
-      <ul className="flex flex-row items-center space-x-2 text-3xl sm:text-4xl [&_svg]:block [&_svg]:leading-none">
+      <ul className="flex flex-row items-center space-x-2 text-4xl [&_svg]:block [&_svg]:leading-none">
         <li>
           <a
             href="mailto:hello@adamrichardturner.dev"
@@ -47,13 +47,13 @@ const SocialLinks = () => {
             <FaLinkedin className="align-top text-primary transition-shadow hover:text-popover-foreground hover:shadow-md" />
           </a>
         </li>
-        <li className="h-[27.34px] w-[27.34px] rounded bg-primary sm:h-[34.17px] sm:w-[34.17px]">
+        <li className="h-[34.17px] w-[34.17px] rounded bg-primary">
           <a
             href="https://adamrichardturner.medium.com/"
             target="_blank"
             aria-label="Medium"
           >
-            <FaMedium className="h-[27.34px] w-[27.34px] rounded p-1.5 text-card shadow-xl transition-shadow hover:bg-popover-foreground sm:h-[34.17px] sm:w-[34.17px] hover:md:shadow-md" />
+            <FaMedium className="h-[34.17px] w-[34.17px] rounded p-1.5 text-card shadow-xl transition-shadow hover:bg-popover-foreground hover:md:shadow-md" />
           </a>
         </li>
         <li className="border-none">

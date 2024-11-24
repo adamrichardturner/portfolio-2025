@@ -29,7 +29,7 @@ const About = () => {
             .
           </p>
           <p className="max-w-[500px] text-[14px]">
-            In addition to this, I enjoy working across the stack to deliver
+            In addition to this, I enjoy building across the stack to deliver
             end-to-end features and projects.
           </p>
           <p className="max-w-[500px] text-[14px]">
@@ -39,6 +39,10 @@ const About = () => {
           <p className="max-w-[500px] text-[14px]">
             Outside of work, I have a love for reading, staying fit, and caring
             for my tropical fish.
+          </p>
+          <p className="max-w-[500px] text-[14px]">
+            I am not looking for new opportunities, but I am always open to
+            discussing potential collaborations and open source projects.
           </p>
         </div>
 
