@@ -64,7 +64,9 @@ export default function RootLayout({
       <GoogleAnalytics />
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light">
-          <div className="hero">{children}</div>
+          <div className="hero flex min-h-svh items-center justify-center">
+            <div className="container w-full">{children}</div>
+          </div>
         </ThemeProvider>
       </body>
     </html>

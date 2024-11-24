@@ -15,7 +15,7 @@ const Navigation = ({ selectedLink, setSelectedLink }: NavigationProps) => {
 
   return (
     <nav className="flex h-full flex-row items-center justify-between">
-      <div className="sm:gap-6.5 flex flex-row items-center justify-start gap-6 rounded-md bg-muted px-6 py-2 drop-shadow-sm">
+      <div className="sm:gap-6.5 sm:text-md flex flex-row items-center justify-start gap-4 rounded-md bg-muted px-4 py-2 text-xs drop-shadow-sm">
         {links.map((link) => (
           <motion.button
             key={link}

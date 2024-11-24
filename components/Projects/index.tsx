@@ -3,11 +3,9 @@ import { motion } from 'framer-motion';
 import projectsData from '@/utils/projectsData.json';
 import ProjectCard from './ProjectCard';
 import { Project } from '@/types/project';
-import LoadingDots from '../LoadingDots';
 
 const Slider = dynamic(() => import('react-slick'), {
-  ssr: false,
-  loading: () => <LoadingDots />,
+  ssr: true,
 });
 
 const Projects = () => {
@@ -47,7 +45,7 @@ const Projects = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="text-white"
+      className="h-full text-white"
     >
       <h2 className="mb-2 font-inter text-xl font-bold leading-none text-foreground sm:text-3xl">
         Projects
@@ -57,8 +55,8 @@ const Projects = () => {
         Here are a selection of side projects I enjoyed building.
       </p>
 
-      <div className="relative overflow-hidden rounded-xl border bg-popover outline-primary drop-shadow">
-        <div className="projects-slider p-0 sm:p-1">
+      <div className="relative max-h-[550px] w-full overflow-hidden rounded-xl border bg-popover outline-primary drop-shadow sm:h-[320px]">
+        <div className="projects-slider h-full p-0 sm:p-1">
           <Slider {...settings}>
             {projects.map((project, index) => (
               <div

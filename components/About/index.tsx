@@ -57,9 +57,7 @@ const About = () => {
               src="/adam-chinatown.jpg"
               alt="Adam Turner in Chinatown"
               fill
-              className={`rounded-lg object-cover transition-opacity duration-300 ${
-                isLoading ? 'opacity-0' : 'opacity-100'
-              }`}
+              className={`rounded-lg object-cover drop-shadow-md`}
               sizes="(max-width: 768px) 100vw, 50vw"
               priority={true}
               loading="eager"

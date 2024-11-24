@@ -1,7 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import { useState, useEffect, Suspense } from 'react';
+import { useState, Suspense, useCallback, useMemo } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import LoadingDots from '@/components/LoadingDots';
@@ -20,7 +20,7 @@ const About = dynamic(() => import('@/components/About'), {
 
 const Projects = dynamic(() => import('@/components/Projects'), {
   loading: () => <LoadingDots />,
-  ssr: false,
+  ssr: true,
 });
 
 const validUrls = Object.values(displayToUrlMap);
@@ -28,14 +28,13 @@ const validUrls = Object.values(displayToUrlMap);
 function PageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [selectedLink, setSelectedLink] = useState('Home');
-
-  useEffect(() => {
+  const [selectedLink, setSelectedLink] = useState(() => {
     const page = searchParams.get('page');
     if (page && validUrls.includes(page)) {
-      setSelectedLink(urlToDisplayMap[page]);
+      return urlToDisplayMap[page];
     }
-  }, [searchParams]);
+    return 'Home';
+  });
 
   const handleLinkChange = (link: string) => {
     setSelectedLink(link);
@@ -43,7 +42,7 @@ function PageContent() {
     router.push(`?page=${urlParam}`);
   };
 
-  const renderContent = () => {
+  const renderContent = useCallback(() => {
     switch (selectedLink) {
       case 'About Me':
         return (
@@ -82,20 +81,20 @@ function PageContent() {
           </motion.div>
         );
     }
-  };
+  }, [selectedLink]);
 
-  const selectedComponent = renderContent();
+  const selectedComponent = useMemo(() => renderContent(), [renderContent]);
 
   return (
-    <div className="container flex h-svh flex-col overflow-hidden pb-2 portrait:overflow-hidden landscape:overflow-auto">
-      <main className="flex flex-1 flex-col items-center justify-center">
-        <header className="mb-0 w-full pb-6">
+    <div className="my-10 flex h-[662px] w-full flex-col sm:h-[460px] sm:py-0">
+      <main className="flex flex-1 flex-col">
+        <header className="w-full pb-6">
           <Navigation
             selectedLink={selectedLink}
             setSelectedLink={handleLinkChange}
           />
         </header>
-        <div className="h-[438px] w-full sm:h-[380px]">
+        <div className="w-full">
           <AnimatePresence>{selectedComponent}</AnimatePresence>
         </div>
       </main>
