@@ -25,9 +25,9 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
           href={project.live}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-transparent"
+          className="rounded-lg bg-lightBackground"
         >
-          <div className="relative h-full w-full rounded-lg bg-transparent">
+          <div className="relative h-full w-full rounded-lg bg-lightBackground">
             <Image
               src={project.media}
               alt={project.title}
