@@ -34,7 +34,10 @@ const Projects = () => {
     ),
     appendDots: (dots: React.ReactNode) => (
       <div>
-        <ul className="m-0 flex items-center justify-center gap-0"> {dots} </ul>
+        <ul className="mt-2 flex items-center justify-center gap-0">
+          {' '}
+          {dots}{' '}
+        </ul>
       </div>
     ),
   };
@@ -50,11 +53,11 @@ const Projects = () => {
         Projects
       </h2>
 
-      <div className="relative overflow-hidden rounded-lg border bg-background outline-primary">
+      <div className="relative overflow-hidden rounded-xl border bg-lightBackground outline-primary">
         <div className="projects-slider p-0 sm:p-1">
           <Slider {...settings}>
             {projects.map((project, index) => (
-              <div key={index} className="p-4 outline-none md:p-8">
+              <div key={index} className="p-4 outline-none sm:p-6">
                 <ProjectCard project={project} isDragging={false} />
               </div>
             ))}

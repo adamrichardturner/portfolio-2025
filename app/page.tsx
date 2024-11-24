@@ -1,10 +1,12 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import LoadingDots from '@/components/LoadingDots';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { displayToUrlMap, urlToDisplayMap } from '@/utils/navigation';
 
 const Home = dynamic(() => import('@/components/Home'), {
   loading: () => <LoadingDots />,
@@ -21,8 +23,25 @@ const Projects = dynamic(() => import('@/components/Projects'), {
   ssr: false,
 });
 
+const validUrls = Object.values(displayToUrlMap);
+
 export default function Page() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [selectedLink, setSelectedLink] = useState('Home');
+
+  useEffect(() => {
+    const page = searchParams.get('page');
+    if (page && validUrls.includes(page)) {
+      setSelectedLink(urlToDisplayMap[page]);
+    }
+  }, [searchParams]);
+
+  const handleLinkChange = (link: string) => {
+    setSelectedLink(link);
+    const urlParam = displayToUrlMap[link];
+    router.push(`?page=${urlParam}`);
+  };
 
   const renderContent = () => {
     switch (selectedLink) {
@@ -70,7 +89,7 @@ export default function Page() {
         <header className="mb-0 w-full pb-6">
           <Navigation
             selectedLink={selectedLink}
-            setSelectedLink={setSelectedLink}
+            setSelectedLink={handleLinkChange}
           />
         </header>
         <div className="h-[438px] w-full sm:h-[380px]">

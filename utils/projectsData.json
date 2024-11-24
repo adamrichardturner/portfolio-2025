@@ -3,33 +3,32 @@
     {
       "title": "Feedback App",
       "media": "/projects/product-feedback.jpg",
-      "description": "Full Stack CRUD application using Next.js & Supabase",
-      "skills": ["Next", "Supabase", "DNDKit"],
+      "description": "CRUD application utilising Next.js Route Handlers, Supabase, Shadcn and DNDKit",
+      "skills": ["Next", "Supabase", "DNDKit", "Shadcn"],
       "github": "https://github.com/adamrichardturner/product-feedback",
       "live": "https://feedback.adamrichardturner.dev/"
     },
     {
       "title": "Invoice Tracker",
       "media": "/projects/invoice-tracker.jpg",
-      "description": "Clean design invoice tracker with smooth animations",
-      "skills": ["React", "Next", "Express"],
+      "description": "Clean design invoice tracker with Express backend, Postgres database and Next.js frontend",
+      "skills": ["React", "Next", "Express", "Postgres"],
       "github": "https://github.com/adamrichardturner/invoice-tracker-frontend",
-      "live": "https://invoice-tracker.adamrichardturner.dev/",
-      "isPriority": true
+      "live": "https://invoice-tracker.adamrichardturner.dev/"
     },
     {
       "title": "NumberNinja Mobile Game",
       "media": "/projects/number-ninja.jpg",
-      "description": "iOS and Android mobile game built with React Native",
-      "skills": ["React Native", "Express", "Firebase"],
+      "description": "iOS and Android mobile game built with React Native, Expo, Postgres and Firebase",
+      "skills": ["React Native", "Express", "Firebase", "Postgres"],
       "github": "https://github.com/adamrichardturner/numberninja",
       "live": "https://apps.apple.com/gb/app/number-ninja-math-game/id6670713997"
     },
     {
       "title": "Countries API",
       "media": "/projects/countries-api.jpg",
-      "description": "Next.js application utilising infinite scroll and Framer Motion",
-      "skills": ["Next", "TypeScript", "Shadcn"],
+      "description": "Next.js front end using the REST Countries API. Utilises infinite scroll, Framer Motion and Shadcn",
+      "skills": ["Next", "Framer Motion", "Shadcn"],
       "github": "https://github.com/adamrichardturner/countries",
       "live": "https://countries.adamrichardturner.dev/"
     }

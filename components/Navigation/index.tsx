@@ -48,5 +48,4 @@ const Navigation = ({ selectedLink, setSelectedLink }: NavigationProps) => {
     </nav>
   );
 };
-
 export default Navigation;
