@@ -52,7 +52,7 @@ const Home = () => {
         {/* Desktop Image */}
         <div className="relative hidden h-[236px] w-full sm:block">
           {isLoading && (
-            <div className="absolute inset-0 z-10 flex items-center justify-center">
+            <div className="absolute inset-0 z-10 flex items-center justify-center bg-transparent">
               <ImageLoader />
             </div>
           )}

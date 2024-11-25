@@ -48,7 +48,7 @@ const About = () => {
 
         <div className="relative hidden h-[236px] w-full drop-shadow-xl sm:block">
           {isLoading && (
-            <div className="absolute inset-0 z-10 flex items-center justify-center bg-lightBackground">
+            <div className="absolute inset-0 z-10 flex items-center justify-center bg-transparent">
               <ImageLoader />
             </div>
           )}
