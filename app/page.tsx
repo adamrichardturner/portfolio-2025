@@ -9,17 +9,14 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { displayToUrlMap, urlToDisplayMap } from '@/utils/navigation';
 
 const Home = dynamic(() => import('@/components/Home'), {
-  loading: () => <LoadingDots />,
   ssr: true,
 });
 
 const About = dynamic(() => import('@/components/About'), {
-  loading: () => <LoadingDots />,
   ssr: true,
 });
 
 const Projects = dynamic(() => import('@/components/Projects'), {
-  loading: () => <LoadingDots />,
   ssr: true,
 });
 
