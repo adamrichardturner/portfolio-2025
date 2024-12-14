@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ModeToggle } from '@/components/ModeToggle';
 import { useTheme } from 'next-themes';
+import { Button } from '../ui/button';
 
 interface NavigationProps {
   selectedLink: string;
@@ -15,31 +16,27 @@ const Navigation = ({ selectedLink, setSelectedLink }: NavigationProps) => {
 
   return (
     <nav className="flex h-full flex-row items-center justify-between">
-      <div className="sm:gap-6.5 sm:text-md flex flex-row items-center justify-start gap-4 rounded-md bg-muted px-4 py-2 text-xs drop-shadow-sm">
+      <div className="sm:gap-6.5 sm:text-md flex flex-row items-center justify-start gap-4 rounded-md bg-muted px-4 py-2.5 text-xs drop-shadow-sm">
         {links.map((link) => (
-          <motion.button
-            key={link}
-            onClick={() => setSelectedLink(link)}
-            className="sm:text-md relative text-[12px]"
-          >
-            <span
-              className={`transition-colors duration-200 ease-in-out ${
+          <motion.div key={link} className="relative">
+            <Button
+              variant="ghost"
+              onClick={() => setSelectedLink(link)}
+              className={`sm:text-md h-[20px] p-0 text-[12px] transition-colors ${
                 selectedLink === link
-                  ? 'font-[600]'
-                  : 'text-primary hover:text-card-foreground'
-              } `}
+                  ? 'text-primary'
+                  : 'text-muted-foreground hover:text-primary'
+              }`}
             >
               {link}
-            </span>
+            </Button>
             {selectedLink === link && (
               <motion.div
-                className="absolute bottom-0 h-[1px] bg-card-foreground"
-                initial={{ width: 0 }}
-                animate={{ width: '100%' }}
-                transition={{ duration: 0.2, ease: 'easeOut' }}
+                className="absolute -bottom-[2px] h-[1.25px] w-full bg-primary"
+                layoutId="activeSection"
               />
             )}
-          </motion.button>
+          </motion.div>
         ))}
       </div>
       <div>

@@ -12,13 +12,13 @@ const Projects = () => {
   const projects = projectsData.projects as Project[];
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     autoplay: true,
     autoplaySpeed: 6000,
     cssEase: 'ease-in-out',
@@ -32,10 +32,7 @@ const Projects = () => {
     ),
     appendDots: (dots: React.ReactNode) => (
       <div>
-        <ul className="mt-2 flex items-center justify-center gap-0">
-          {' '}
-          {dots}{' '}
-        </ul>
+        <ul className="flex items-center justify-center gap-0"> {dots} </ul>
       </div>
     ),
   };
@@ -55,13 +52,13 @@ const Projects = () => {
         Here are a selection of side projects I enjoyed building.
       </p>
 
-      <div className="relative max-h-[550px] w-full overflow-hidden rounded-xl border bg-popover outline-primary drop-shadow sm:h-[320px]">
+      <div className="relative w-full overflow-hidden rounded-xl border bg-popover/85 outline-primary drop-shadow md:h-[306px]">
         <div className="projects-slider h-full p-0 sm:p-1">
           <Slider {...settings}>
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="px-2 py-4 outline-none sm:px-6 sm:py-6"
+                className="px-2 pt-4 outline-none sm:px-6 sm:py-6"
               >
                 <ProjectCard project={project} isDragging={false} />
               </div>

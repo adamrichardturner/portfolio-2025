@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "title": "Goal Hacker",
+      "media": "/projects/goal-hacker.jpg",
+      "description": "Full Stack long-term goal tracker app with Express, Next.js, Postgres and Docker",
+      "skills": ["Express", "Next", "Docker", "Nginx"],
+      "live": "https://www.goalhacker.app"
+    },
+    {
       "title": "Feedback App",
       "media": "/projects/product-feedback.jpg",
       "description": "CRUD application utilising Next.js Route Handlers, Supabase, Shadcn and DNDKit",

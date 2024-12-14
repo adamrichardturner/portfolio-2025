@@ -83,7 +83,7 @@ function PageContent() {
   const selectedComponent = useMemo(() => renderContent(), [renderContent]);
 
   return (
-    <div className="my-10 flex h-[662px] w-full flex-col sm:h-[460px] sm:py-0">
+    <div className="my-10 flex w-full flex-col sm:h-[460px] sm:py-0">
       <main className="flex flex-1 flex-col">
         <header className="w-full pb-6">
           <Navigation

@@ -14,7 +14,7 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="grid grid-cols-1 gap-6 bg-transparent px-2 pb-4 md:grid-cols-2">
+    <div className="grid grid-cols-1 gap-6 bg-transparent px-4 md:grid-cols-2">
       <div className="relative aspect-video h-full w-full rounded-lg bg-lightBackground drop-shadow-xl">
         {isLoading && (
           <div className="absolute inset-0 z-10 flex items-center justify-center">
@@ -46,7 +46,7 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
           <h2 className="mb-2 text-xl font-bold text-foreground">
             {project.title}
           </h2>
-          <p className="text-sm leading-tight text-primary">
+          <p className="text-xs leading-tight text-primary sm:text-sm">
             {project.description}
           </p>
         </div>
@@ -63,36 +63,40 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
             ))}
           </div>
         </div>
-        <div className="mt-6 flex gap-4">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => isDragging && e.preventDefault()}
-            className="flex items-center gap-2"
-          >
-            <Button
-              variant="outline"
-              className="h-[36px] w-[82px] border-none bg-gray-200 text-sm text-darkBackground hover:bg-gray-100 hover:text-black"
+        <div className="flex gap-4 py-6 sm:py-0 sm:pt-6">
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => isDragging && e.preventDefault()}
+              className="flex items-center gap-2"
             >
-              <FaGithub size={8} /> GitHub
-            </Button>
-          </a>
-          <a
-            href={project.live}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => isDragging && e.preventDefault()}
-            className="flex items-center gap-2 text-gray-200 transition hover:text-white"
-          >
-            <Button
-              variant="outline"
-              className="flex h-[36px] w-[82px] items-center justify-center border-none bg-[#42674f] text-sm text-justWhite hover:bg-lightSecondary hover:text-whitest"
+              <Button
+                variant="outline"
+                className="h-[36px] w-[82px] border-none bg-gray-200 text-sm text-darkBackground hover:bg-gray-100 hover:text-black"
+              >
+                <FaGithub size={8} /> GitHub
+              </Button>
+            </a>
+          )}
+          {project.live && (
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => isDragging && e.preventDefault()}
+              className="flex items-center gap-2 text-gray-200 transition hover:text-white"
             >
-              <FaLink size={8} className="pr-1" />
-              Live
-            </Button>
-          </a>
+              <Button
+                variant="outline"
+                className="flex h-[36px] w-[82px] items-center justify-center border-none bg-[#42674f] text-sm text-justWhite hover:bg-lightSecondary hover:text-whitest"
+              >
+                <FaLink size={8} className="pr-1" />
+                Live
+              </Button>
+            </a>
+          )}
         </div>
       </div>
     </div>

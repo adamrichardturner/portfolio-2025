@@ -65,11 +65,11 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          <div className="hero flex min-h-svh items-center justify-center">
+          <div className="hero flex min-h-svh justify-center overflow-hidden md:items-center">
             <div className="container w-full">{children}</div>
           </div>
         </ThemeProvider>

@@ -33,8 +33,16 @@ const About = () => {
             end-to-end features and projects.
           </p>
           <p className="max-w-[500px] text-[14px]">
-            I work for a high-performing start-up in London which specialises in
-            cutting-edge mobile technology for the eCommerce sector.
+            I work for a high-performing start-up in London called{' '}
+            <a
+              href="https://vennapps.com"
+              className="font-semibold text-foreground"
+              target="_blank"
+            >
+              Venn Apps
+            </a>
+            . We specialise in cutting-edge mobile technology for the eCommerce
+            sector.
           </p>
           <p className="max-w-[500px] text-[14px]">
             Outside of work, I have a love for reading, staying fit, and caring
