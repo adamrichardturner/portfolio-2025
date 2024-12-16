@@ -22,7 +22,7 @@ const Navigation = ({ selectedLink, setSelectedLink }: NavigationProps) => {
             <Button
               variant="ghost"
               onClick={() => setSelectedLink(link)}
-              className={`sm:text-md h-[20px] p-0 text-[12px] transition-colors ${
+              className={`sm:text-md h-[20px] p-0 text-[12px] transition-colors hover:bg-transparent ${
                 selectedLink === link
                   ? 'text-primary'
                   : 'text-muted-foreground hover:text-primary'
