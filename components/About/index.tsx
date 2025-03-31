@@ -22,14 +22,14 @@ const About = () => {
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
         <div className="space-y-4 text-primary">
           <p className="max-w-[500px] text-[14px]">
-            I'm passionate about{' '}
+            I&apos;m passionate about{' '}
             <span className="font-semibold text-foreground">
               Front End Development
             </span>
             .
           </p>
           <p className="max-w-[500px] text-[14px]">
-            I'm also skilled at building full-stack, end-to-end features.
+            I&apos;m also skilled at building full-stack, end-to-end features.
           </p>
           <p className="max-w-[500px] text-[14px]">
             I work for a high-performing SaaS company in London called{' '}
