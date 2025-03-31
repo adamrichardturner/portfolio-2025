@@ -22,31 +22,26 @@ const About = () => {
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
         <div className="space-y-4 text-primary">
           <p className="max-w-[500px] text-[14px]">
-            I have a strong passion for{' '}
+            I'm passionate about{' '}
             <span className="font-semibold text-foreground">
               Front End Development
             </span>
             .
           </p>
           <p className="max-w-[500px] text-[14px]">
-            In addition to this, I enjoy building across the stack to deliver
-            end-to-end features and projects.
+            I'm also skilled at building full-stack, end-to-end features.
           </p>
           <p className="max-w-[500px] text-[14px]">
-            I work for a high-performing start-up in London called{' '}
+            I work for a high-performing SaaS company in London called{' '}
             <a
               href="https://vennapps.com"
               className="font-semibold text-foreground"
               target="_blank"
             >
               Venn Apps
-            </a>
-            . We specialise in cutting-edge mobile technology for the eCommerce
+            </a>{' '}
+            that specialises in cutting-edge mobile technology for the eCommerce
             sector.
-          </p>
-          <p className="max-w-[500px] text-[14px]">
-            Outside of work, I have a love for reading, staying fit, and caring
-            for my tropical fish.
           </p>
           <p className="max-w-[500px] text-[14px]">
             I am not looking for new opportunities, but I am always open to

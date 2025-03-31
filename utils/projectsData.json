@@ -1,11 +1,12 @@
 {
   "projects": [
     {
-      "title": "Goal Hacker",
-      "media": "/projects/goal-hacker.jpg",
-      "description": "Full Stack long-term goal tracker app with Express, Next.js, Postgres and Docker",
-      "skills": ["Express", "Next", "Docker", "Nginx"],
-      "live": "https://www.goalhacker.app"
+      "title": "Finance",
+      "media": "/projects/finance.jpg",
+      "description": "Full Stack Remix app with Postgres, Docker & Shadcn",
+      "skills": ["Remix", "Postgres", "Docker", "Shadcn"],
+      "github": "https://github.com/adamrichardturner/finance",
+      "live": "https://finance.adamrichardturner.dev"
     },
     {
       "title": "Feedback App",
