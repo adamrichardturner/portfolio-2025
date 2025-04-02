@@ -25,14 +25,12 @@ const About = () => {
             I&apos;m passionate about{' '}
             <span className="font-semibold text-foreground">
               Front End Development
-            </span>
-            .
+            </span>{' '}
+            and skilled at building full-stack, end-to-end features.
           </p>
           <p className="max-w-[500px] text-[14px]">
-            I&apos;m also skilled at building full-stack, end-to-end features.
-          </p>
-          <p className="max-w-[500px] text-[14px]">
-            I work for a high-performing SaaS company in London called{' '}
+            Currently working for a high-performing SaaS company in London
+            called{' '}
             <a
               href="https://vennapps.com"
               className="font-semibold text-foreground"
@@ -44,8 +42,25 @@ const About = () => {
             sector.
           </p>
           <p className="max-w-[500px] text-[14px]">
-            I am not looking for new opportunities, but I am always open to
-            discussing potential collaborations and open source projects.
+            Not actively looking for new opportunities, but always open to
+            discussing potential{' '}
+            <span className="font-semibold text-foreground">
+              collaborations
+            </span>{' '}
+            and{' '}
+            <span className="font-semibold text-foreground">
+              open source projects
+            </span>
+            .
+          </p>
+          <p className="max-w-[500px] text-[14px]">
+            If you&apos;d like to get in touch, please reach out via{' '}
+            <a
+              href="mailto:adam@adamrichardturner.dev"
+              className="font-semibold text-foreground"
+            >
+              email.
+            </a>
           </p>
         </div>
 

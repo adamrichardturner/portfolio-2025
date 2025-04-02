@@ -3,7 +3,7 @@
     {
       "title": "Finance",
       "media": "/projects/finance.jpg",
-      "description": "Full Stack Remix app with Postgres, Docker & Shadcn",
+      "description": "Full Stack Remix application leveraging a Postgres database, Docker, and Shadcn UI",
       "skills": ["Remix", "Postgres", "Docker", "Shadcn"],
       "github": "https://github.com/adamrichardturner/finance",
       "live": "https://finance.adamrichardturner.dev"
