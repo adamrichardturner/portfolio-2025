@@ -58,7 +58,7 @@ const Home = () => {
           )}
           <div className="relative h-full w-full overflow-hidden rounded-lg drop-shadow-xl">
             <Image
-              src="/adam-fountain.jpg"
+              src="/adam-park.jpg"
               alt="Adam Richard Turner"
               fill
               className="rounded-lg object-cover drop-shadow-md"

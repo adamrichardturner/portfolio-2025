@@ -72,8 +72,8 @@ const About = () => {
           )}
           <div className="relative h-full w-full overflow-hidden rounded-lg">
             <Image
-              src="/adam-chinatown.jpg"
-              alt="Adam Turner in Chinatown"
+              src="/adam-central.jpg"
+              alt="Adam Turner in London"
               fill
               className={`rounded-lg object-cover drop-shadow-md`}
               sizes="(max-width: 768px) 100vw, 50vw"
