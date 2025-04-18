@@ -15,7 +15,7 @@ const ProjectCard = ({ project, isDragging }: ProjectCardProps) => {
 
   return (
     <div className="grid grid-cols-1 gap-6 bg-transparent px-4 md:grid-cols-2">
-      <div className="relative aspect-video h-full w-full rounded-lg bg-lightBackground drop-shadow-xl">
+      <div className="relative aspect-video h-full w-full rounded-lg bg-lightBackground drop-shadow transition duration-300 ease-in-out hover:drop-shadow-lg">
         {isLoading && (
           <div className="absolute inset-0 z-10 flex items-center justify-center">
             <ImageLoader />

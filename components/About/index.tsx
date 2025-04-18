@@ -42,8 +42,8 @@ const About = () => {
             sector.
           </p>
           <p className="max-w-[500px] text-[14px]">
-            Not actively looking for new opportunities, but always open to
-            discussing potential{' '}
+            Not looking for new opportunities, but always open to discussing
+            potential{' '}
             <span className="font-semibold text-foreground">
               collaborations
             </span>{' '}
