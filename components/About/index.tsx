@@ -56,7 +56,7 @@ const About = () => {
           <p className="max-w-[500px] text-[14px]">
             If you&apos;d like to get in touch, please reach out via{' '}
             <a
-              href="mailto:adam@adamrichardturner.dev"
+              href="mailto:hello@adamrichardturner.dev"
               className="font-semibold text-foreground"
             >
               email.
