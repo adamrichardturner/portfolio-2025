@@ -1,6 +1,14 @@
 {
   "projects": [
     {
+      "title": "Kanban Board",
+      "media": "/projects/kanban-board.jpg",
+      "description": "Full Stack Next.js application with DNDKit, Framer Motion, Postgres, Docker and Shadcn UI",
+      "skills": ["Next", "Postgres", "Shadcn", "DNDKit"],
+      "github": "https://github.com/adamrichardturner/kanban-board",
+      "live": "https://kanban.adamrichardturner.dev"
+    },
+    {
       "title": "Finance",
       "media": "/projects/finance.jpg",
       "description": "Full Stack Remix application leveraging a Postgres database, Docker, and Shadcn UI",
