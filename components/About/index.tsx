@@ -29,8 +29,7 @@ const About = () => {
             and skilled at building full-stack, end-to-end features.
           </p>
           <p className="max-w-[500px] text-[14px]">
-            Currently working for a high-performing SaaS company in London
-            called{' '}
+            Working for a high-performing SaaS company in London called{' '}
             <a
               href="https://vennapps.com"
               className="font-semibold text-foreground"
